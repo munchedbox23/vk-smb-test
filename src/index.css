@@ -1,13 +1,133 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("./assets/fonts/SFProText-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("./assets/fonts/SFProText-Medium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("./assets/fonts/SFProText-Semibold.ttf") format("ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("./assets/fonts/SFProText-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+  scroll-padding: 2rem;
+}
+
+:root {
+  --primary: #0077ff;
+  --white---white: #fff;
+  --white---white-alpha72: rgba(255, 255, 255, 0.72);
+  --white---white-alpha64: rgba(255, 255, 255, 0.64);
+  --white---white-alpha40: rgba(255, 255, 255, 0.4);
+  --white---white-alpha16: rgba(255, 255, 255, 0.16);
+  --white---transparent-white: rgba(255, 255, 255, 0);
+  --white---white-alpha24: rgba(255, 255, 255, 0.24);
+  --white---white-alpha4: rgba(255, 255, 255, 0.04);
+  --black---black: #000;
+  --black---black-alpha88: rgba(0, 0, 0, 0.88);
+  --black---black-alpha72: rgba(0, 0, 0, 0.72);
+  --black---black-alpha56: rgba(0, 0, 0, 0.56);
+  --black---black-alpha40: rgba(0, 0, 0, 0.4);
+  --black---black-alpha24: rgba(0, 0, 0, 0.24);
+  --black---black-alpha16: rgba(0, 0, 0, 0.16);
+  --black---black-alpha12: rgba(0, 0, 0, 0.12);
+  --black---black-alpha8: rgba(0, 0, 0, 0.08);
+  --black---transparent-black: rgba(0, 0, 0, 0);
+  --blue---400: #5181b8;
+  --blue---420: #4a76a8;
+  --blue---600: #2a5885;
+  --blue---640: #224b7a;
+  --blue---blue-800: #1d3a5c;
+  --blue---400-alpha48: rgba(81, 129, 184, 0.48);
+  --blue---980-alpha12: rgba(0, 20, 51, 0.12);
+  --gray---200: #ccc;
+  --gray---300: #b3b3b3;
+  --gray---400: #939393;
+  --gray---500: #828282;
+  --gray---600: #656565;
+  --gray---700: #555;
+  --gray---800: #333;
+  --gray---900: #222;
+  --gray---960: #0a0a0a;
+  --gray---800-alpha88: rgba(51, 51, 51, 0.88);
+  --gray---800-alpha72: rgba(51, 51, 51, 0.72);
+  --gray---900-alpha16: rgba(10, 10, 10, 0.16);
+  --steel-gray---10: #fafbfc;
+  --steel-gray---20: #f7f8fa;
+  --steel-gray---40: #f2f3f5;
+  --steel-gray---60: #edeef0;
+  --steel-gray---80: #e7e8ec;
+  --steel-gray---100: #dce1e5;
+  --steel-gray---120: #d3d9de;
+  --steel-gray---140: #c5d0db;
+  --steel-gray---200: #aeb7c2;
+  --steel-gray---300: #99a2ad;
+  --steel-gray---400: #818c99;
+  --steel-gray---500: #6f7985;
+  --steel-gray---540: #626d7a;
+  --steel-gray---a540: #55677d;
+  --steel-gray---600: #4e5966;
+  --light-blue---40: #e5ebf1;
+  --light-blue---80: #dfe6ed;
+  --light-blue---100: #dae2ea;
+  --light-blue---300: #9eb4c8;
+  --light-blue---a300: #8fadc8;
+  --light-blue---400: #7996b2;
+  --light-blue---500: #577ca1;
+  --light-blue---700: #45688e;
+  --colors---blue-bright: #5c9ce6;
+  --colors---sky-200: #70c1ff;
+  --colors---sky-100: #99d3ff;
+  --colors---sky-80: #b2deff;
+  --colors---turquoise: #63b9ba;
+  --colors---green-dark: #43a843;
+  --colors---green: #4bb34b;
+  --colors---green-nice: #3dcc4b;
+  --colors---red: #e64646;
+  --colors---red-nice: #ff3347;
+  --colors---orange-fire: #f05c44;
+  --colors---orange-prominent: #ff724c;
+  --colors---orange: #ffa000;
+  --colors---yellow: #ffc107;
+  --colors---green-light: #def0d3;
+  --colors---yellow-light: #faefd2;
+  --colors---red-light: #ffd6cc;
+  --colors---green-alpha16: rgba(75, 179, 75, 0.16);
+  --colors---red-alpha16: rgba(230, 70, 70, 0.16);
+  --colors---azure-a100: #2787f5;
+  --font-family: "SF Pro Text", sans-serif;
+  --second-family: "Roboto", sans-serif;
+}
+
+body {
+  background: var(--steel-gray---60);
+  color: var(--black---black);
+  min-height: 100vh;
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: var(--font-family);
 }
