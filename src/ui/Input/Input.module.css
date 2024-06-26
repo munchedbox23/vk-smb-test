@@ -1,0 +1,17 @@
+.input input {
+  width: 300px;
+  height: 36px;
+  border-radius: 8px;
+  padding: 8px 12px;
+  line-height: 20px;
+  border: 1px solid var(--black---black-alpha12);
+  outline: none;
+  text-overflow: ellipsis;
+  background-color: rgb(240, 242, 245);
+  font-size: 1rem;
+  transition: border 0.6s ease;
+}
+
+.input input:focus {
+  border: 1px solid #447bba;
+}

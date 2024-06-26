@@ -1,6 +1,6 @@
 import { useAppDispatch } from "../services/store/hooks";
 import { useNavigate } from "react-router";
-import { ROUTE } from "../utils/contstants";
+import { ROUTE } from "../utils/constants";
 import { ChangeEvent, FormEvent, useState } from "react";
 
 export const useForm = <T>(initial: T) => {
