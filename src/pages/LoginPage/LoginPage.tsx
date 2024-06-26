@@ -3,9 +3,10 @@ import { AuthForm } from "../../components/AuthForm/AuthForm";
 import { useForm } from "../../hooks/useForm";
 import Input from "../../ui/Input/Input";
 import { LoginLinks } from "../../components/AuthForm/AuthLinks/AuthLinks";
+import { IUserLogin } from "../../types/user-types";
 
 export const LoginPage: FC = () => {
-  const { formState, onChange } = useForm<{ email: string; password: string }>({
+  const { formState, onChange } = useForm<IUserLogin>({
     email: "",
     password: "",
   });

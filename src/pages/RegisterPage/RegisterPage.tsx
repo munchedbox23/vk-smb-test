@@ -3,13 +3,10 @@ import { AuthForm } from "../../components/AuthForm/AuthForm";
 import { useForm } from "../../hooks/useForm";
 import Input from "../../ui/Input/Input";
 import { RegisterLinks } from "../../components/AuthForm/AuthLinks/AuthLinks";
+import { IUserRegister } from "../../types/user-types";
 
 export const RegisterPage: FC = () => {
-  const { formState, onChange } = useForm<{
-    email: string;
-    password: string;
-    name: string;
-  }>({
+  const { formState, onChange } = useForm<IUserRegister>({
     name: "",
     password: "",
     email: "",
@@ -23,7 +20,7 @@ export const RegisterPage: FC = () => {
       linkComponent={RegisterLinks}
     >
       <Input
-        type="name"
+        type="text"
         required
         autoComplete="off"
         name="name"

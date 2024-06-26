@@ -1,3 +1,7 @@
+.inputForm {
+  position: relative;
+}
+
 .input input {
   width: 300px;
   height: 36px;
@@ -14,4 +18,12 @@
 
 .input input:focus {
   border: 1px solid #447bba;
+}
+
+.inputIcon {
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: var(--steel-gray---600);
 }
