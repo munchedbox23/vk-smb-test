@@ -20,7 +20,7 @@
   height: 100%;
   padding: 16px;
   justify-content: space-between;
-  gap: 80px;
+  width: 100%;
 }
 
 .headerLogo {
@@ -30,8 +30,6 @@
 
 .headerNavigation {
   composes: header-flex;
-  justify-content: flex-end;
-  flex: 1 1 auto;
   gap: 20px;
 }
 
