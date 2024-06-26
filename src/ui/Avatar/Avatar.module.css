@@ -1,0 +1,38 @@
+.account {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.accountLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.accountName {
+  background-color: transparent;
+  border: none;
+  color: var(--steel-gray---400);
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 300px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: color 0.6s ease;
+}
+
+.accountName:hover {
+  color: var(--blue---640);
+}
+
+.profileAvatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-image: url("https://w7.pngwing.com/pngs/241/832/png-transparent-business-management-computer-software-apartment-organization-user-avatar-blue-angle-company.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

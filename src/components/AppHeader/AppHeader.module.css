@@ -1,0 +1,87 @@
+.header-flex {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  composes: header-flex;
+  height: 65px;
+  width: 100%;
+  background: var(--white---white);
+  position: relative;
+  z-index: 10;
+  box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.27);
+}
+
+.headerWrapper {
+  composes: header-flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 16px;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.headerLogo {
+  width: 183px;
+  height: 32px;
+}
+
+.headerNavigation {
+  composes: header-flex;
+  justify-content: flex-end;
+  flex: 1 1 auto;
+  gap: 20px;
+}
+
+.menuList {
+  composes: header-flex;
+  gap: 20px;
+}
+
+.headerForm {
+  composes: header-flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
+
+.formWrapper {
+  composes: header-flex;
+  gap: 8px;
+  position: relative;
+  height: 32px;
+  border-radius: 8px;
+  border: 2px solid hsla(218, 54%, 19.6%, 0.16);
+  max-width: 500px;
+  width: 100%;
+}
+
+.formIcon {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  color: var(--ds-text-subtle);
+  width: 14px;
+  height: 14px;
+  color: var(--steel-gray---500);
+}
+
+.searchField {
+  display: block;
+  background-color: #f7f8f9;
+  color: var(--ds-text-subtle);
+  height: 100%;
+  width: 300px;
+  border-radius: 8px;
+  outline: none;
+  padding: 0px 12px 0px 30px;
+  transition: width 1.5s ease;
+  border: none;
+}
+
+.searchField::placeholder {
+  font-size: 15px;
+  font-weight: 500;
+}

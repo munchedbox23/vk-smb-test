@@ -1,11 +1,63 @@
-import { FC } from "react";
+import { ChangeEvent, FC } from "react";
 import headerStyles from "./AppHeader.module.css";
-import cn from "classnames";
+import vkLogo from "../../assets/images/vk-logo.png";
+import { Link, useSearchParams } from "react-router-dom";
+import { ROUTE } from "../../utils/contstants";
+import { navLinks } from "../../utils/contstants";
+import { HeaderLink } from "../HeaderLink/HeaderLink";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { Avatar } from "../../ui/Avatar/Avatar";
 
 export const AppHeader: FC = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const searchTerm = e.target.value;
+    setSearchParams({ ...searchParams, [e.target.name]: searchTerm });
+  };
+
   return (
-    <header className={cn(headerStyles.header)}>
-      <div>1</div>
+    <header id="page-header" className={headerStyles.header}>
+      <div className={headerStyles.headerWrapper}>
+        <Link target="_blank" to={ROUTE.home}>
+          <img
+            src={vkLogo}
+            alt="Логотип Вконтакте"
+            className={headerStyles.headerLogo}
+          />
+        </Link>
+        <nav className={headerStyles.headerNavigation}>
+          <ul className={headerStyles.menuList}>
+            {navLinks.map((item) => (
+              <HeaderLink
+                key={item.id}
+                textLink={item.name}
+                route={item.route}
+              />
+            ))}
+          </ul>
+          <form autoComplete="off" className={headerStyles.headerForm}>
+            <div className={headerStyles.formWrapper}>
+              <FontAwesomeIcon
+                icon={faMagnifyingGlass}
+                className={headerStyles.formIcon}
+              />
+              <input
+                type="text"
+                placeholder="Фильмы, сериалы"
+                name="search"
+                maxLength={500}
+                className={headerStyles.searchField}
+                autoComplete="off"
+                value={searchParams.get("search") || ""}
+                onChange={handleSearchChange}
+              />
+            </div>
+          </form>
+        </nav>
+        <Avatar />
+      </div>
     </header>
   );
 };

@@ -122,6 +122,11 @@
   --second-family: "Roboto", sans-serif;
 }
 
+a {
+  color: var(--black---black);
+  outline: none;
+}
+
 body {
   background: var(--steel-gray---60);
   color: var(--black---black);
