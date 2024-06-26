@@ -4,9 +4,10 @@ import { useForm } from "../../hooks/useForm";
 import Input from "../../ui/Input/Input";
 import { RegisterLinks } from "../../components/AuthForm/AuthLinks/AuthLinks";
 import { IUserRegister } from "../../types/user-types";
+import { userRegister } from "../../services/features/user/auth";
 
 export const RegisterPage: FC = () => {
-  const { formState, onChange } = useForm<IUserRegister>({
+  const { formState, onChange, onSubmit } = useForm<IUserRegister>({
     name: "",
     password: "",
     email: "",
@@ -14,7 +15,7 @@ export const RegisterPage: FC = () => {
 
   return (
     <AuthForm
-      onSubmit={() => console.log(1)}
+      onSubmit={(e) => onSubmit(e, userRegister)}
       title="Регистрация ВКонтакте"
       buttonText="Зарегистрироваться "
       linkComponent={RegisterLinks}

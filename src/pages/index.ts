@@ -3,6 +3,7 @@ import { LoginPage } from "./LoginPage/LoginPage";
 import { RegisterPage } from "./RegisterPage/RegisterPage";
 import { ForgotPasswordPage } from "./ForgotPassword/ForgotPasswordPage";
 import { ResetPasswordPage } from "./ResetPassword/ResetPasswordPage";
+import { ProfilePage } from "./ProfilePage/ProfilePage";
 
 export {
   NotFound,
@@ -10,4 +11,5 @@ export {
   RegisterPage,
   ForgotPasswordPage,
   ResetPasswordPage,
+  ProfilePage,
 };

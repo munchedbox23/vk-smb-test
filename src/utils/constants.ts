@@ -9,6 +9,24 @@ interface IRoutes {
   mainLayout: Record<string, string>;
 }
 
+interface IApi {
+  authBaseUrl: string;
+  authEndpoints: Record<string, string>;
+}
+
+export const API: IApi = {
+  authBaseUrl: "https://norma.nomoreparties.space/api",
+  authEndpoints: {
+    login: "/auth/login",
+    register: "/auth/register",
+    logout: "/auth/logout",
+    forgotPassword: "/password-reset",
+    resetPassword: "/password-reset/reset",
+    userData: "/auth/user",
+    refreshToken: "/auth/token",
+  },
+};
+
 export const ROUTE: IRoutes = {
   home: "/",
   mainLayout: {

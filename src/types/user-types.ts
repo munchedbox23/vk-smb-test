@@ -36,4 +36,4 @@ export interface IUserLogout {
   message: "Successful logout";
 }
 
-export interface IRefreshToken extends Omit<IUserResponse, "user"> {}
+export interface IRefreshTokenResponse extends Omit<IUserResponse, "user"> {}

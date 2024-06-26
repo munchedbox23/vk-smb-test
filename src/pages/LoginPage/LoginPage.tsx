@@ -4,16 +4,17 @@ import { useForm } from "../../hooks/useForm";
 import Input from "../../ui/Input/Input";
 import { LoginLinks } from "../../components/AuthForm/AuthLinks/AuthLinks";
 import { IUserLogin } from "../../types/user-types";
+import { userLogin } from "../../services/features/user/auth";
 
 export const LoginPage: FC = () => {
-  const { formState, onChange } = useForm<IUserLogin>({
+  const { formState, onChange, onSubmit } = useForm<IUserLogin>({
     email: "",
     password: "",
   });
 
   return (
     <AuthForm
-      onSubmit={() => console.log(1)}
+      onSubmit={(e) => onSubmit(e, userLogin)}
       title="Вход ВКонтакте"
       buttonText="Войти"
       linkComponent={LoginLinks}
