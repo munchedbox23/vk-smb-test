@@ -5,8 +5,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { ROUTE } from "../../utils/contstants";
 import { navLinks } from "../../utils/contstants";
 import { HeaderLink } from "../HeaderLink/HeaderLink";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import SearchIcon from "@mui/icons-material/Search";
 import { Avatar } from "../../ui/Avatar/Avatar";
 
 export const AppHeader: FC = () => {
@@ -39,10 +38,7 @@ export const AppHeader: FC = () => {
           </ul>
           <form autoComplete="off" className={headerStyles.headerForm}>
             <div className={headerStyles.formWrapper}>
-              <FontAwesomeIcon
-                icon={faMagnifyingGlass}
-                className={headerStyles.formIcon}
-              />
+              <SearchIcon className={headerStyles.formIcon} />
               <input
                 type="text"
                 placeholder="Фильмы, сериалы"

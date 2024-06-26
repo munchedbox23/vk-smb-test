@@ -4,11 +4,21 @@ interface INavLink {
   route: string;
 }
 
-export const ROUTE = {
+interface IRoutes {
+  home: string;
+  mainLayout: Record<string, string>;
+}
+
+export const ROUTE: IRoutes = {
   home: "/",
   mainLayout: {
     movieCatalog: "movie-catalog",
     favouritesMovies: "films/favourites",
+    login: "login",
+    register: "register",
+    resetPass: "reset-password",
+    forgotPass: "forgot-password",
+    profile: "profile",
   },
 };
 

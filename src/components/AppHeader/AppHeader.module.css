@@ -58,11 +58,10 @@
 
 .formIcon {
   position: absolute;
-  top: 6px;
-  left: 8px;
-  color: var(--ds-text-subtle);
   width: 14px;
   height: 14px;
+  top: 2px;
+  left: 5px;
   color: var(--steel-gray---500);
 }
 
