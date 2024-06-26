@@ -1,19 +1,42 @@
-import { FC } from "react";
+import { FC, FormEvent } from "react";
 import { AuthForm } from "../../components/AuthForm/AuthForm";
 import { useForm } from "../../hooks/useForm";
 import Input from "../../ui/Input/Input";
 import { ForgotLinks } from "../../components/AuthForm/AuthLinks/AuthLinks";
-import { IUserResetPassword } from "../../types/user-types";
+import { Navigate, useNavigate } from "react-router";
+import { resetPassword } from "../../services/features/user/auth";
+import { ROUTE } from "../../utils/constants";
 
 export const ResetPasswordPage: FC = () => {
-  const { formState, onChange } = useForm<IUserResetPassword>({
-    token: "",
+  const { formState, onChange, setFormState } = useForm<{
+    password: string;
+    token: string;
+  }>({
     password: "",
+    token: "",
   });
+  const navigate = useNavigate();
+  const forgotSuccess: string | null = localStorage.getItem("forgotPassword");
 
-  return (
+  const handleReset = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    resetPassword(formState)
+      .then((res) => {
+        if (res && res.success) {
+          localStorage.removeItem("forgotPassword");
+          navigate(`/${ROUTE.mainLayout.login}`, { replace: true });
+          setFormState({
+            password: "",
+            token: "",
+          });
+        }
+      })
+      .catch((error) => console.error(error));
+  };
+
+  return forgotSuccess ? (
     <AuthForm
-      onSubmit={() => console.log(1)}
+      onSubmit={handleReset}
       title="Восстановление пароля"
       buttonText="Восстановить "
       linkComponent={ForgotLinks}
@@ -37,5 +60,7 @@ export const ResetPasswordPage: FC = () => {
         onChange={onChange}
       />
     </AuthForm>
+  ) : (
+    <Navigate to={ROUTE.mainLayout.forgotPassword} replace={true} />
   );
 };
