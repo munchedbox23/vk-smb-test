@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { ROUTE } from "../../utils/contstants";
+import { ROUTE } from "../../utils/constants";
 import styles from "./NotFound.module.css";
 import { Link } from "react-router-dom";
 

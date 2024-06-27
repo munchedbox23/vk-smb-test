@@ -1,0 +1,15 @@
+.primaryButton {
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 2px;
+  width: 300px;
+  text-align: center;
+  height: 36px;
+  padding: 0 16px;
+  color: var(--white---white);
+  background-color: #447bba;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
