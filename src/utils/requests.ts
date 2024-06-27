@@ -52,7 +52,7 @@ export function setCookie(
 }
 
 export function deleteCookie(name: string): void {
-  setCookie(name, "", { expires: -1 });
+  document.cookie = name + "=; Max-Age=-99999999;";
 }
 
 export const refreshToken = (): Promise<IRefreshTokenResponse> => {

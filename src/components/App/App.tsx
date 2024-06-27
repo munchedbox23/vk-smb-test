@@ -13,6 +13,7 @@ import {
 } from "../../pages";
 import { checkUserAuth } from "../../services/features/user/auth";
 import { OnlyAuth, OnlyUnAuth } from "../WithProtectedRoute/WithProtectedRoute";
+import { ProfileInfo } from "../Profile/ProfileInfo/ProfileInfo";
 
 const App: FC = () => {
   const location = useLocation();
@@ -36,7 +37,9 @@ const App: FC = () => {
         <Route
           path={ROUTE.mainLayout.profile}
           element={<OnlyAuth component={<ProfilePage />} />}
-        />
+        >
+          <Route index element={<OnlyAuth component={<ProfileInfo />} />} />
+        </Route>
         <Route
           path={ROUTE.mainLayout.forgotPass}
           element={<OnlyUnAuth component={<ForgotPasswordPage />} />}
