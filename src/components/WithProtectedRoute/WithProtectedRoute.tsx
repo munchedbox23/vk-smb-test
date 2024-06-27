@@ -30,7 +30,9 @@ export const WithProtectedRoute: FC<TWithProtectedRouteProps> = ({
   }
 
   if (!user && !onlyUnAuth) {
-    return <Navigate to={ROUTE.mainLayout.login} state={{ from: location }} />;
+    return (
+      <Navigate to={`/${ROUTE.mainLayout.login}`} state={{ from: location }} />
+    );
   }
 
   return component;

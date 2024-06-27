@@ -9,7 +9,7 @@ export const Avatar: FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <div className={styles.account}>
-      <Link to={`/${ROUTE.mainLayout.login}`} className={styles.accountLink}>
+      <Link to={`/${ROUTE.mainLayout.profile}`} className={styles.accountLink}>
         <span className={styles.accountName}>{user?.name ?? "Войти"}</span>
         <div className={styles.profileAvatar}></div>
       </Link>
