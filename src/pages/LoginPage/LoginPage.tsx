@@ -26,6 +26,7 @@ export const LoginPage: FC = () => {
         placeholder="example@gmail.com"
         value={formState.email || ""}
         onChange={onChange}
+        required
       />
       <Input
         type="password"
@@ -34,6 +35,7 @@ export const LoginPage: FC = () => {
         placeholder="Введите пароль"
         value={formState.password || ""}
         onChange={onChange}
+        required
       />
     </AuthForm>
   );
