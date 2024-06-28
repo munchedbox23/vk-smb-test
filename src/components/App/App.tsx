@@ -14,6 +14,7 @@ import {
 import { checkUserAuth } from "../../services/features/user/auth";
 import { OnlyAuth, OnlyUnAuth } from "../WithProtectedRoute/WithProtectedRoute";
 import { ProfileInfo } from "../Profile/ProfileInfo/ProfileInfo";
+import { fetchMovies } from "../../services/features/movies/movieSlice";
 
 const App: FC = () => {
   const location = useLocation();
@@ -21,6 +22,7 @@ const App: FC = () => {
 
   useEffect(() => {
     dispatch(checkUserAuth());
+    dispatch(fetchMovies(1));
   }, [dispatch]);
 
   return (

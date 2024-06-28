@@ -11,11 +11,13 @@ interface IRoutes {
 
 interface IApi {
   authBaseUrl: string;
+  moviesBaseUrl: string;
   authEndpoints: Record<string, string>;
 }
 
 export const API: IApi = {
   authBaseUrl: "https://norma.nomoreparties.space/api",
+  moviesBaseUrl: "https://api.kinopoisk.dev/v1.4/movie",
   authEndpoints: {
     login: "/auth/login",
     register: "/auth/register",

@@ -26,7 +26,7 @@ export const ProfileInfo: FC = () => {
         email: user.email,
       });
     }
-  }, [user?.name, user?.email]);
+  }, [user, setFormState]);
 
   return (
     <article className={profileStyles.profileInfo}>

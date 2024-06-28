@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren } from "react";
+import { FC, PropsWithChildren, memo } from "react";
 import btnStyles from "./PrimaryButton.module.css";
 
 type TPrimaryButtonProps = {
@@ -6,18 +6,16 @@ type TPrimaryButtonProps = {
   onClick?: () => void;
 };
 
-export const PrimaryButton: FC<PropsWithChildren<TPrimaryButtonProps>> = ({
-  children,
-  buttonType,
-  onClick,
-}) => {
-  return (
-    <button
-      onClick={onClick}
-      className={btnStyles.primaryButton}
-      type={buttonType}
-    >
-      {children}
-    </button>
-  );
-};
+export const PrimaryButton: FC<PropsWithChildren<TPrimaryButtonProps>> = memo(
+  ({ children, buttonType, onClick }) => {
+    return (
+      <button
+        onClick={onClick}
+        className={btnStyles.primaryButton}
+        type={buttonType}
+      >
+        {children}
+      </button>
+    );
+  }
+);
