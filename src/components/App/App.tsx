@@ -1,4 +1,4 @@
-import { useAppDispatch } from "../../services/store/hooks";
+import { useAppDispatch, useAppSelector } from "../../services/store/hooks";
 import { Routes, Route, useLocation } from "react-router";
 import { MainLayout } from "../../layouts/MainLayout/MainLayout";
 import { FC, useEffect } from "react";
@@ -10,19 +10,22 @@ import {
   ForgotPasswordPage,
   ResetPasswordPage,
   ProfilePage,
+  MoviePage,
 } from "../../pages";
 import { checkUserAuth } from "../../services/features/user/auth";
 import { OnlyAuth, OnlyUnAuth } from "../WithProtectedRoute/WithProtectedRoute";
 import { ProfileInfo } from "../Profile/ProfileInfo/ProfileInfo";
 import { fetchMovies } from "../../services/features/movies/movieSlice";
+import { pageNum } from "../../services/features/movies/movieSelectors";
 
 const App: FC = () => {
   const location = useLocation();
   const dispatch = useAppDispatch();
+  const currentPage = useAppSelector(pageNum);
 
   useEffect(() => {
     dispatch(checkUserAuth());
-    dispatch(fetchMovies(1));
+    dispatch(fetchMovies(currentPage));
   }, [dispatch]);
 
   return (
@@ -32,6 +35,7 @@ const App: FC = () => {
           path={ROUTE.mainLayout.login}
           element={<OnlyUnAuth component={<LoginPage />} />}
         />
+        <Route path={ROUTE.mainLayout.movieCatalog} element={<MoviePage />} />
         <Route
           path={ROUTE.mainLayout.register}
           element={<OnlyUnAuth component={<RegisterPage />} />}

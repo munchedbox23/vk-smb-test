@@ -17,7 +17,9 @@ export const MainLayout: FC = () => {
         <Preloader />
       ) : (
         <main className={styles.mainContent}>
-          <Outlet />
+          <div className={styles.contenWrapper}>
+            <Outlet />
+          </div>
         </main>
       )}
     </>

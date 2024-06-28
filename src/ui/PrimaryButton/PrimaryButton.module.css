@@ -2,6 +2,7 @@
   cursor: pointer;
   border-radius: 8px;
   margin-top: 2px;
+  max-width: 100%;
   width: 300px;
   text-align: center;
   height: 36px;

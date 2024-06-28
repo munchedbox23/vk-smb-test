@@ -23,7 +23,7 @@ export const fetchMovies = createAsyncThunk<IMoviesResponse<IMovie>, number>(
   "movies/fetchMovies",
   async (page) => {
     const response = await request<IMoviesResponse<IMovie>>(
-      `${API.moviesBaseUrl}?page=${page}&limit=50`,
+      `${API.moviesBaseUrl}?page=${page}&limit=5051515`,
       {
         method: "GET",
         headers: {
@@ -32,7 +32,6 @@ export const fetchMovies = createAsyncThunk<IMoviesResponse<IMovie>, number>(
         },
       }
     );
-
     return response;
   }
 );
