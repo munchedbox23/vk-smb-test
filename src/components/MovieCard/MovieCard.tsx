@@ -9,7 +9,6 @@ type TMovieCardProps = {
 };
 
 export const MovieCard: FC<TMovieCardProps> = ({ data }) => {
-  console.log(data);
   return (
     <Link to={`/movies/${data.id}`} className={cardStyles.movieCard}>
       <div className={cardStyles.cardWrapper}>

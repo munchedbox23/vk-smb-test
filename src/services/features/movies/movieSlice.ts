@@ -3,10 +3,11 @@ import { request } from "../../../utils/requests";
 import { API } from "../../../utils/constants";
 import { IMovie, IMoviesResponse } from "../../../types/movie-types";
 
-const API_KEY = "4T6X7R1-FAY4CK5-QEV5B3M-TJBP5QK";
+const API_KEY = "5SHN074-JG5445K-K6A85RX-HDTQFE1";
 
 type TMovieSliceState = {
   movies: IMovie[];
+  filteredMovies: IMovie[];
   getMoviesRequestFailed: boolean;
   getMoviesRequestLoading: boolean;
   currentPage: number;
@@ -14,6 +15,7 @@ type TMovieSliceState = {
 
 export const initialState: TMovieSliceState = {
   movies: [],
+  filteredMovies: [],
   getMoviesRequestLoading: false,
   getMoviesRequestFailed: false,
   currentPage: 1,
@@ -43,6 +45,17 @@ export const movieSlice = createSlice({
     setCurrentPage: (state, action: PayloadAction<number>) => {
       state.currentPage = action.payload;
     },
+    //Фильтрация фильмов на стороне клиента 
+    filteredMoviesByName: (state, action: PayloadAction<string>) => {
+      const searchTerm = action.payload.toLowerCase();
+      state.movies = [...state.filteredMovies].filter((movie) => {
+        return (
+          (movie.name && movie.name.toLowerCase().includes(searchTerm)) ||
+          (movie.alternativeName &&
+            movie.alternativeName.toLowerCase().includes(searchTerm))
+        );
+      });
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -53,6 +66,8 @@ export const movieSlice = createSlice({
       .addCase(fetchMovies.fulfilled, (state, action) => {
         state.getMoviesRequestLoading = false;
         state.movies = action.payload.docs;
+        state.filteredMovies = action.payload.docs;
+        state.currentPage = action.payload.page;
       })
       .addCase(fetchMovies.rejected, (state) => {
         state.getMoviesRequestLoading = false;
@@ -61,5 +76,5 @@ export const movieSlice = createSlice({
   },
 });
 
-export const { setCurrentPage } = movieSlice.actions;
+export const { setCurrentPage, filteredMoviesByName } = movieSlice.actions;
 export default movieSlice.reducer;

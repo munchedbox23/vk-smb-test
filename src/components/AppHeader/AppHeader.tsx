@@ -7,13 +7,17 @@ import { navLinks } from "../../utils/constants";
 import { HeaderLink } from "../HeaderLink/HeaderLink";
 import SearchIcon from "@mui/icons-material/Search";
 import { Avatar } from "../../ui/Avatar/Avatar";
+import { useAppDispatch } from "../../services/store/hooks";
+import { filteredMoviesByName } from "../../services/features/movies/movieSlice";
 
 export const AppHeader: FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
+  const dispatch = useAppDispatch();
 
   const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
     const searchTerm = e.target.value;
     setSearchParams({ ...searchParams, [e.target.name]: searchTerm });
+    dispatch(filteredMoviesByName(searchTerm));
   };
 
   return (
