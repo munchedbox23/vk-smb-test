@@ -3,7 +3,7 @@ import { request } from "../../../utils/requests";
 import { API } from "../../../utils/constants";
 import { IMovie, IMoviesResponse } from "../../../types/movie-types";
 
-const API_KEY = "J5TFEXC-RDAM6A8-HKNPQGV-M7PSC7C";
+const API_KEY = "4T6X7R1-FAY4CK5-QEV5B3M-TJBP5QK";
 
 type TMovieSliceState = {
   movies: IMovie[];
@@ -23,7 +23,7 @@ export const fetchMovies = createAsyncThunk<IMoviesResponse<IMovie>, number>(
   "movies/fetchMovies",
   async (page) => {
     const response = await request<IMoviesResponse<IMovie>>(
-      `${API.moviesBaseUrl}?page=${page}&limit=5051515`,
+      `${API.moviesBaseUrl}?page=${page}&limit=50&notNullFields=poster.url`,
       {
         method: "GET",
         headers: {

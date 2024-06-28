@@ -32,7 +32,7 @@ export const API: IApi = {
 export const ROUTE: IRoutes = {
   home: "/",
   mainLayout: {
-    movieCatalog: "movie-catalog",
+    movieCatalog: "movies",
     favouritesMovies: "films/favourites",
     login: "login",
     register: "register",

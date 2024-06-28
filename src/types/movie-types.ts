@@ -37,7 +37,7 @@ export interface ReleaseYear {
 export interface IMovie {
   ageRating: number | null;
   alternativeName: string | null;
-  countries: Array<ICountry>;
+  countries?: Array<ICountry>;
   description: string | null;
   genres: Array<IGenre>;
   id: number;

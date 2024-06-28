@@ -6,7 +6,7 @@ import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 
 interface CustomSelectProps {
-  options: string[];
+  options: (string | number)[];
   label: string;
   onChange: (value: string[]) => void;
   value: string[];

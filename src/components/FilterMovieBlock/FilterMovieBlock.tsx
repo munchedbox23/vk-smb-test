@@ -10,6 +10,11 @@ export const FilterMovieBlock: FC = () => {
   const [selectedValues, setSelectedValues] = useState<string[]>([]);
   const [value, setValue] = useState<number[]>([0, 10]);
   const options = ["Option 1", "Option 2", "Option 3", "Option 4", "Option 5"];
+  const currentYear = new Date().getFullYear();
+  const years = Array.from(
+    { length: currentYear - 1990 + 1 },
+    (_, i) => 1990 + i
+  );
 
   const handleChange = (value: string[]) => {
     console.log(value);
@@ -28,7 +33,7 @@ export const FilterMovieBlock: FC = () => {
           value={selectedValues}
         />
         <CustomSelect
-          options={options}
+          options={years}
           label="Годы"
           onChange={handleChange}
           value={selectedValues}

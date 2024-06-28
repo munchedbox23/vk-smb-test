@@ -1,0 +1,14 @@
+.movies {
+  width: calc(75% - 45px);
+  flex: 1 1 auto;
+  padding: 1.6rem;
+  padding-top: 0;
+}
+
+.movieList {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
