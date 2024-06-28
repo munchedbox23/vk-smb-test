@@ -8,7 +8,6 @@ import {
   selectMovies,
 } from "../../services/features/movies/movieSelectors";
 import { setCurrentPage } from "../../services/features/movies/movieSlice";
-import { fetchMovies } from "../../services/features/movies/movieSlice";
 
 export const MovieList: FC = () => {
   const movies = useAppSelector(selectMovies);
@@ -20,7 +19,6 @@ export const MovieList: FC = () => {
     value: number
   ): void => {
     dispatch(setCurrentPage(value));
-    dispatch(fetchMovies(value));
   };
 
   return (
@@ -36,7 +34,7 @@ export const MovieList: FC = () => {
           К сожаление, сервис не смог найти ни одного фильма по вашему запросу
         </strong>
       )}
-      <Pagination count={10} page={currentPage} onChange={handlePageChange} />
+      <Pagination count={20} page={currentPage} onChange={handlePageChange} />
     </article>
   );
 };

@@ -10,7 +10,11 @@
   color: var(--white---white);
   background-color: #447bba;
   border: none;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }

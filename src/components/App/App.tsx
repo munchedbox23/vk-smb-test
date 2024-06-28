@@ -17,6 +17,7 @@ import { OnlyAuth, OnlyUnAuth } from "../WithProtectedRoute/WithProtectedRoute";
 import { ProfileInfo } from "../Profile/ProfileInfo/ProfileInfo";
 import { fetchMovies } from "../../services/features/movies/movieSlice";
 import { pageNum } from "../../services/features/movies/movieSelectors";
+import { Movie } from "../Movie/Movie";
 
 const App: FC = () => {
   const location = useLocation();
@@ -26,7 +27,7 @@ const App: FC = () => {
   useEffect(() => {
     dispatch(checkUserAuth());
     dispatch(fetchMovies(currentPage));
-  }, [dispatch]);
+  }, [dispatch, currentPage]);
 
   return (
     <Routes key={location?.pathname} location={location}>
@@ -35,11 +36,12 @@ const App: FC = () => {
           path={ROUTE.mainLayout.login}
           element={<OnlyUnAuth component={<LoginPage />} />}
         />
-        <Route path={ROUTE.mainLayout.movieCatalog} element={<MoviePage />} />
+        <Route path={ROUTE.mainLayout.movie} element={<MoviePage />} />
         <Route
           path={ROUTE.mainLayout.register}
           element={<OnlyUnAuth component={<RegisterPage />} />}
         />
+        <Route path={ROUTE.mainLayout.currentMovie} element={<Movie />} />
         <Route
           path={ROUTE.mainLayout.profile}
           element={<OnlyAuth component={<ProfilePage />} />}

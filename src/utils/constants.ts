@@ -32,7 +32,8 @@ export const API: IApi = {
 export const ROUTE: IRoutes = {
   home: "/",
   mainLayout: {
-    movieCatalog: "movies",
+    movie: "movies",
+    currentMovie: "movies/:movieId",
     favouritesMovies: "films/favourites",
     login: "login",
     register: "register",
@@ -46,7 +47,7 @@ export const navLinks: Array<INavLink> = [
   {
     id: 1,
     name: "Онлайн кинотеатр",
-    route: `/${ROUTE.mainLayout.movieCatalog}`,
+    route: `/${ROUTE.mainLayout.movie}`,
   },
   {
     id: 2,
