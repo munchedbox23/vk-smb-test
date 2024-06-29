@@ -15,7 +15,9 @@ import {
 import { checkUserAuth } from "../../services/features/user/auth";
 import { OnlyAuth, OnlyUnAuth } from "../WithProtectedRoute/WithProtectedRoute";
 import { ProfileInfo } from "../Profile/ProfileInfo/ProfileInfo";
-import { fetchMovies } from "../../services/features/movies/movieSlice";
+import {
+  fetchMoviesWithFilters,
+} from "../../services/features/movies/movieSlice";
 import { pageNum } from "../../services/features/movies/movieSelectors";
 import { Movie } from "../Movie/Movie";
 
@@ -26,7 +28,7 @@ const App: FC = () => {
 
   useEffect(() => {
     dispatch(checkUserAuth());
-    dispatch(fetchMovies(currentPage));
+    dispatch(fetchMoviesWithFilters(currentPage));
   }, [dispatch, currentPage]);
 
   return (

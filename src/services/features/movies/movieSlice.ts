@@ -12,6 +12,11 @@ type TMovieSliceState = {
   getMoviesRequestLoading: boolean;
   currentPage: number;
   selectedMovie: IMovie | null;
+  filters: {
+    genres: string[];
+    years: string[];
+    rating: number[];
+  };
 };
 
 export const initialState: TMovieSliceState = {
@@ -21,17 +26,20 @@ export const initialState: TMovieSliceState = {
   getMoviesRequestFailed: false,
   currentPage: 1,
   selectedMovie: null,
+  filters: {
+    genres: [],
+    years: [],
+    rating: [0, 10],
+  },
 };
 
 export const fetchMoviesWithFilters = createAsyncThunk<
   IMoviesResponse<IMovie>,
-  {
-    page: number;
-    genres: string[];
-    years: string[];
-    rating: number[];
-  }
->("movies/fetchMoviesWithFilters", async ({ page, genres, years, rating }) => {
+  number
+>("movies/fetchMoviesWithFilters", async (page, { getState }) => {
+  const state = getState() as { movies: TMovieSliceState };
+  const { genres, years, rating } = state.movies.filters;
+
   let apiUrl = `${API.moviesBaseUrl}?page=${page}&limit=50&notNullFields=poster.url`;
 
   if (genres.length > 0) {
@@ -61,23 +69,6 @@ export const fetchMoviesWithFilters = createAsyncThunk<
   return response;
 });
 
-export const fetchMovies = createAsyncThunk<IMoviesResponse<IMovie>, number>(
-  "movies/fetchMovies",
-  async (page) => {
-    const response = await request<IMoviesResponse<IMovie>>(
-      `${API.moviesBaseUrl}?page=${page}&limit=50&notNullFields=poster.url`,
-      {
-        method: "GET",
-        headers: {
-          "Content-type": "application/json",
-          "X-API-KEY": API_KEY,
-        },
-      }
-    );
-    return response;
-  }
-);
-
 export const movieSlice = createSlice({
   name: "movies",
   initialState,
@@ -99,23 +90,19 @@ export const movieSlice = createSlice({
     setSelectedMovie: (state, action: PayloadAction<IMovie>) => {
       state.selectedMovie = action.payload;
     },
+    setFilters: (
+      state,
+      action: PayloadAction<{
+        genres: string[];
+        years: string[];
+        rating: number[];
+      }>
+    ) => {
+      state.filters = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchMovies.pending, (state) => {
-        state.getMoviesRequestFailed = false;
-        state.getMoviesRequestLoading = true;
-      })
-      .addCase(fetchMovies.fulfilled, (state, action) => {
-        state.getMoviesRequestLoading = false;
-        state.movies = action.payload.docs;
-        state.filteredMovies = action.payload.docs;
-        state.currentPage = action.payload.page;
-      })
-      .addCase(fetchMovies.rejected, (state) => {
-        state.getMoviesRequestLoading = false;
-        state.getMoviesRequestFailed = true;
-      })
       .addCase(fetchMoviesWithFilters.pending, (state) => {
         state.getMoviesRequestFailed = false;
         state.getMoviesRequestLoading = true;
@@ -133,6 +120,10 @@ export const movieSlice = createSlice({
   },
 });
 
-export const { setCurrentPage, filteredMoviesByName, setSelectedMovie } =
-  movieSlice.actions;
+export const {
+  setCurrentPage,
+  filteredMoviesByName,
+  setSelectedMovie,
+  setFilters,
+} = movieSlice.actions;
 export default movieSlice.reducer;

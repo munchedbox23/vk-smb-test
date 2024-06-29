@@ -1,4 +1,4 @@
-import { FC, FormEvent, useState } from "react";
+import { FC, FormEvent } from "react";
 import styles from "./FilterMovieBlock.module.css";
 import CustomSelect from "../../ui/CustomSelect/CustomSelect";
 import Box from "@mui/material/Box";
@@ -9,43 +9,37 @@ import { Genre } from "../../utils/genres";
 import { useAppDispatch, useAppSelector } from "../../services/store/hooks";
 import { fetchMoviesWithFilters } from "../../services/features/movies/movieSlice";
 import { pageNum } from "../../services/features/movies/movieSelectors";
+import { setFilters } from "../../services/features/movies/movieSlice";
 
 export const FilterMovieBlock: FC = () => {
   const dispatch = useAppDispatch();
   const currentPage = useAppSelector(pageNum);
   const options = Object.values(Genre);
   const currentYear = new Date().getFullYear();
-  const years = Array.from(
+  const optionYears = Array.from(
     { length: currentYear - 1990 + 1 },
     (_, i) => 1990 + i
   );
 
-  const [selectedGenres, setSelectedGenres] = useState<string[]>([]);
-  const [selectedYears, setSelectedYears] = useState<string[]>([]);
-  const [selectedRating, setSelectedRating] = useState<number[]>([0, 10]);
+  const { genres, years, rating } = useAppSelector(
+    (state) => state.movies.filters
+  );
 
   const handleGenreChange = (value: string[]) => {
-    setSelectedGenres(value);
+    dispatch(setFilters({ genres: value, years, rating }));
   };
 
   const handleYearChange = (value: string[]) => {
-    setSelectedYears(value);
+    dispatch(setFilters({ genres, years: value, rating }));
   };
 
   const handleRatingChange = (event: Event, newValue: number | number[]) => {
-    setSelectedRating(newValue as number[]);
+    dispatch(setFilters({ genres, years, rating: newValue as number[] }));
   };
 
   const handleApplyFilters = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    dispatch(
-      fetchMoviesWithFilters({
-        page: currentPage,
-        genres: selectedGenres,
-        years: selectedYears,
-        rating: selectedRating,
-      })
-    );
+    dispatch(fetchMoviesWithFilters(currentPage));
   };
 
   return (
@@ -54,13 +48,13 @@ export const FilterMovieBlock: FC = () => {
         <CustomSelect
           options={options}
           label="Жанры"
-          value={selectedGenres}
+          value={genres}
           onChange={handleGenreChange}
         />
         <CustomSelect
-          options={years}
+          options={optionYears}
           label="Годы"
-          value={selectedYears}
+          value={years}
           onChange={handleYearChange}
         />
         <Box sx={{ width: "100%" }}>
@@ -77,7 +71,7 @@ export const FilterMovieBlock: FC = () => {
             valueLabelDisplay="auto"
             min={0}
             max={10}
-            value={selectedRating}
+            value={rating}
             onChange={handleRatingChange}
           />
         </Box>

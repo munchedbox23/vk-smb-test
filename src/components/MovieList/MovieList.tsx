@@ -8,6 +8,7 @@ import {
   selectMovies,
 } from "../../services/features/movies/movieSelectors";
 import { setCurrentPage } from "../../services/features/movies/movieSlice";
+import { fetchMoviesWithFilters } from "../../services/features/movies/movieSlice";
 
 export const MovieList: FC = () => {
   const movies = useAppSelector(selectMovies);
@@ -19,6 +20,7 @@ export const MovieList: FC = () => {
     value: number
   ): void => {
     dispatch(setCurrentPage(value));
+    dispatch(fetchMoviesWithFilters(value));
   };
 
   return (

@@ -50,10 +50,12 @@ const CustomSelect: React.FC<CustomSelectProps> = ({
     <FormControl sx={{ width: "100%", height: "36px" }}>
       <InputLabel
         id="custom-select-label"
+        shrink={value.length > 0 || isFocused}
         sx={{
-          transform: isFocused
-            ? "translate(14px, -9px) scale(0.75)"
-            : "translate(14px, 6px) scale(1)",
+          transform:
+            isFocused || value.length > 0
+              ? "translate(14px, -9px) scale(0.75)"
+              : "translate(14px, 6px) scale(1)",
           transition: "transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms",
         }}
       >
