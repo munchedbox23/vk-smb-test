@@ -1,4 +1,4 @@
-import { ChangeEvent, FC } from "react";
+import { ChangeEvent, FC, FormEvent } from "react";
 import headerStyles from "./AppHeader.module.css";
 import vkLogo from "../../assets/images/vk-logo.png";
 import { Link, useSearchParams } from "react-router-dom";
@@ -40,7 +40,11 @@ export const AppHeader: FC = () => {
               />
             ))}
           </ul>
-          <form autoComplete="off" className={headerStyles.headerForm}>
+          <form
+            onSubmit={(e: FormEvent<HTMLFormElement>) => e.preventDefault()}
+            autoComplete="off"
+            className={headerStyles.headerForm}
+          >
             <div className={headerStyles.formWrapper}>
               <SearchIcon className={headerStyles.formIcon} />
               <input

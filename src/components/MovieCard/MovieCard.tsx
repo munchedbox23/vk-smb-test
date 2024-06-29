@@ -1,18 +1,28 @@
 import { FC } from "react";
 import cardStyles from "./MovieCard.module.css";
 import { IMovie } from "../../types/movie-types";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import { setSelectedMovie } from "../../services/features/movies/movieSlice";
+import { useAppDispatch } from "../../services/store/hooks";
 
 type TMovieCardProps = {
   data: IMovie;
 };
 
 export const MovieCard: FC<TMovieCardProps> = ({ data }) => {
+  const navigate = useNavigate();
+  const dispatch = useAppDispatch();
+
+  const handleChooseMovie = (): void => {
+    navigate(`/movies/${data.id}`);
+    dispatch(setSelectedMovie(data));
+  };
+
   return (
-    <Link to={`/movies/${data.id}`} className={cardStyles.movieCard}>
+    <div onClick={handleChooseMovie} className={cardStyles.movieCard}>
       <div className={cardStyles.cardWrapper}>
         <img
           className={cardStyles.cardPoster}
@@ -34,6 +44,6 @@ export const MovieCard: FC<TMovieCardProps> = ({ data }) => {
           </p>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };

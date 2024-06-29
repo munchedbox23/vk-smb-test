@@ -1,17 +1,13 @@
-import { useParams } from "react-router";
 import styles from "./Movie.module.css";
 import { useAppSelector } from "../../services/store/hooks";
-import { selectMovies } from "../../services/features/movies/movieSelectors";
+import { selectedMovie } from "../../services/features/movies/movieSelectors";
 import { FC } from "react";
 import BookmarksIcon from "@mui/icons-material/Bookmarks";
 import { PrimaryButton } from "../../ui/PrimaryButton/PrimaryButton";
 import { IGenre, IRating } from "../../types/movie-types";
 
 export const Movie: FC = () => {
-  const { movieId } = useParams();
-  const currentMovie = useAppSelector(selectMovies).find(
-    (movie) => movie.id === Number(movieId)
-  );
+  const currentMovie = useAppSelector(selectedMovie);
 
   const movieDetails: {
     id: number;

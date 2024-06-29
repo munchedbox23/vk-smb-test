@@ -8,3 +8,4 @@ export const selectMovies = (state: RootState) => state.movies.movies;
 export const selectMovieById = (state: RootState, movieId: string) => {
   return state.movies.movies.find((movie: IMovie) => movie.id === +movieId);
 };
+export const selectedMovie = (state: RootState) => state.movies.selectedMovie;
