@@ -3,6 +3,8 @@ import cardStyles from "./MovieCard.module.css";
 import { IMovie } from "../../types/movie-types";
 import { Link } from "react-router-dom";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 type TMovieCardProps = {
   data: IMovie;
@@ -17,6 +19,9 @@ export const MovieCard: FC<TMovieCardProps> = ({ data }) => {
           src={data.poster.previewUrl}
           alt="Постер фильма"
         />
+        <button className={cardStyles.favoriteBtn}>
+          <FavoriteBorderIcon />
+        </button>
         <div className={cardStyles.movieDetails}>
           <span>
             {(data.countries && data.countries[0]?.name) || "Unknown country"},{" "}

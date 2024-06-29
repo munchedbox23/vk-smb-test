@@ -34,7 +34,7 @@ export const MovieList: FC = () => {
           К сожаление, сервис не смог найти ни одного фильма по вашему запросу
         </strong>
       )}
-      <Pagination count={20} page={currentPage} onChange={handlePageChange} />
+      <Pagination count={2000} page={currentPage} onChange={handlePageChange} />
     </article>
   );
 };

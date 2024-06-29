@@ -57,7 +57,9 @@ export const Movie: FC = () => {
               {item.rowValue instanceof Array ? (
                 <ul className={styles.genreArray}>
                   {item.rowValue.map((genre, index) => (
-                    <li key={index}>{genre.name}</li>
+                    <li className={styles.genre} key={index}>
+                      {genre.name}
+                    </li>
                   ))}
                 </ul>
               ) : (

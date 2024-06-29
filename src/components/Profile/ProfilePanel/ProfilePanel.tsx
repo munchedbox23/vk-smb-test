@@ -6,8 +6,9 @@ import { HeaderLink } from "../../HeaderLink/HeaderLink";
 import { ROUTE } from "../../../utils/constants";
 import { userLogout } from "../../../services/features/user/auth";
 import { useLocation, useNavigate } from "react-router";
+import { FC } from "react";
 
-export const ProfilePanel = () => {
+export const ProfilePanel: FC = () => {
   const user = useAppSelector((store) => store.user.user);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
