@@ -5,6 +5,7 @@ import { FC } from "react";
 import BookmarksIcon from "@mui/icons-material/Bookmarks";
 import { PrimaryButton } from "../../ui/PrimaryButton/PrimaryButton";
 import { IGenre, IRating } from "../../types/movie-types";
+import CheckIcon from "@mui/icons-material/Check";
 
 export const Movie: FC = () => {
   const currentMovie = useAppSelector(selectedMovie);

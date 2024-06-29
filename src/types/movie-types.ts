@@ -60,3 +60,7 @@ export interface IMovie {
   votes: IVotes;
   year: number;
 }
+
+export interface IMovieWithUser extends IMovie {
+  user: string;
+}
