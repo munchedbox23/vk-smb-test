@@ -57,6 +57,7 @@ export interface IMovie {
   typeNumber: number;
   votes: IRating;
   year: number;
+  slogan?: string | null;
 }
 
 export interface IMovieWithUser extends IMovie {

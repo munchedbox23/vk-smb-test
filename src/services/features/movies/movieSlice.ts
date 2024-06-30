@@ -110,6 +110,7 @@ export const movieSlice = createSlice({
       state.getMoviesRequestLoading = false;
       state.movies = action.payload.docs;
       state.totalPages = action.payload.pages;
+      console.log(action.payload);
       state.filteredMovies = action.payload.docs;
       state.currentPage = action.payload.page;
     };
