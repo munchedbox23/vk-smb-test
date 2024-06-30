@@ -1,29 +1,12 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import movieStyles from "./MovieList.module.css";
-import Pagination from "@mui/material/Pagination";
 import { MovieCard } from "../MovieCard/MovieCard";
-import { useAppDispatch, useAppSelector } from "../../services/store/hooks";
-import {
-  pageNum,
-  selectMovies,
-} from "../../services/features/movies/movieSelectors";
-import { setCurrentPage } from "../../services/features/movies/movieSlice";
-import { fetchMoviesWithFilters } from "../../services/features/movies/movieSlice";
+import { IMovie } from "../../types/movie-types";
 
-export const MovieList: FC = () => {
-  const totalPages = useAppSelector((store) => store.movies.totalPages);
-  const movies = useAppSelector(selectMovies);
-  const dispatch = useAppDispatch();
-  const currentPage = useAppSelector(pageNum);
-
-  const handlePageChange = (
-    event: React.ChangeEvent<unknown>,
-    value: number
-  ): void => {
-    dispatch(setCurrentPage(value));
-    dispatch(fetchMoviesWithFilters(value));
-  };
-
+export const MovieList: FC<PropsWithChildren<{ movies: IMovie[] }>> = ({
+  children,
+  movies,
+}) => {
   return (
     <article className={movieStyles.movies}>
       {movies.length ? (
@@ -37,11 +20,7 @@ export const MovieList: FC = () => {
           К сожаление, сервис не смог найти ни одного фильма по вашему запросу
         </strong>
       )}
-      <Pagination
-        count={totalPages}
-        page={currentPage}
-        onChange={handlePageChange}
-      />
+      {children}
     </article>
   );
 };
