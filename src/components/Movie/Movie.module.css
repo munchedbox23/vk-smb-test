@@ -76,3 +76,30 @@
   border: 1px solid #616161;
   font-size: 14px;
 }
+
+@media (max-height: 800px) {
+  .formContent {
+    max-height: 600px;
+  }
+}
+
+@media (max-height: 750px) {
+  .imageContainer {
+    width: 35%;
+  }
+  .movieInfo {
+    width: 65%;
+  }
+  .moviePoster {
+    max-height: 500px;
+  }
+}
+
+@media (max-height: 620px) {
+  .imageContainer {
+    width: 40%;
+  }
+  .moviePoster {
+    max-height: 450px;
+  }
+}

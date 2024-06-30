@@ -36,3 +36,27 @@
   width: 49px;
   height: 48px;
 }
+
+@media (max-height: 800px) {
+  .formContent {
+    padding-top: 110px;
+  }
+}
+
+@media (max-height: 750px) {
+  .formContent {
+    padding-top: 40px;
+  }
+}
+
+@media (max-height: 620px) {
+  .formContent {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .formWrapper {
+    max-width: 500px;
+  }
+}

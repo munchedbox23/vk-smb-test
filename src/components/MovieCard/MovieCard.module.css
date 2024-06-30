@@ -85,3 +85,25 @@
   color: #111827;
   line-height: 100%;
 }
+
+@media (max-width: 998px) {
+  .movieCard {
+    width: 200px;
+    height: 400px;
+  }
+
+  .cardPoster {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .movieCard {
+    width: 250px;
+    height: 430px;
+  }
+
+  .cardPoster {
+    height: 300px;
+  }
+}

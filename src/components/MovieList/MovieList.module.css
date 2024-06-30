@@ -23,3 +23,15 @@
   margin-bottom: 80px;
   color: var(--gray---700);
 }
+
+@media (max-width: 890px) {
+  .movies {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .movies {
+    width: 100%;
+  }
+}
