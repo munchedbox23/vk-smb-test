@@ -6,9 +6,11 @@ import BookmarksIcon from "@mui/icons-material/Bookmarks";
 import { PrimaryButton } from "../../ui/PrimaryButton/PrimaryButton";
 import { IGenre, IRating } from "../../types/movie-types";
 import CheckIcon from "@mui/icons-material/Check";
+import { useFavouriteMovie } from "../../hooks/useFavouriteMovie";
 
 export const Movie: FC = () => {
   const currentMovie = useAppSelector(selectedMovie);
+  const { isFavorite, toggleFavorite } = useFavouriteMovie(currentMovie);
 
   const movieDetails: {
     id: number;
@@ -43,8 +45,9 @@ export const Movie: FC = () => {
       </div>
       <section className={styles.movieInfo}>
         <h1>{currentMovie?.name ?? currentMovie?.alternativeName}</h1>
-        <PrimaryButton buttonType="button">
-          <BookmarksIcon />В избранное
+        <PrimaryButton buttonType="button" onClick={toggleFavorite}>
+          {isFavorite ? <CheckIcon /> : <BookmarksIcon />}
+          {isFavorite ? "В избранном" : "В избранное"}
         </PrimaryButton>
         <p className={styles.movieDescription}>{currentMovie?.description}</p>
         <div className={styles.details}>
