@@ -29,6 +29,14 @@ export const ProfilePanel: FC = () => {
       .catch((error) => console.error(error));
   };
 
+  const getDescription = (): string => {
+    if (location.pathname.endsWith(ROUTE.mainLayout.profile)) {
+      return "В этом разделе вы можете изменить свои персональные данные";
+    } else {
+      return "В этом разделе вы можете посмотреть свои любимые фильмы";
+    }
+  };
+
   return (
     <aside className={profileStyles.panel}>
       <div className={profileStyles.panelContainer}>
@@ -55,11 +63,7 @@ export const ProfilePanel: FC = () => {
             <span> Выйти из профиля</span>
           </button>
         </ul>
-        <p className={profileStyles.description}>
-          {location.pathname.endsWith(ROUTE.mainLayout.profile)
-            ? "В этом разделе вы можете изменить свои персональные данные"
-            : "В этом разделе вы можете посмотреть свои любимые фильмы"}
-        </p>
+        <p className={profileStyles.description}>{getDescription()}</p>
       </div>
     </aside>
   );

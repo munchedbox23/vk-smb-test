@@ -35,30 +35,25 @@ export const initialState: TMovieSliceState = {
   },
 };
 
+const buildApiUrl = (page: number, filters: TMovieSliceState["filters"]) => {
+  const genreParams = filters.genres
+    .map((genre) => `&genres.name=${genre}`)
+    .join("");
+  const yearParams = filters.years.map((year) => `&year=${year}`).join("");
+  const ratingParam =
+    filters.rating[0] !== 0 || filters.rating[1] !== 10
+      ? `&rating.imdb=${filters.rating[0]}-${filters.rating[1]}`
+      : "";
+
+  return `${API.moviesBaseUrl}?page=${page}&limit=50&notNullFields=poster.url${genreParams}${yearParams}${ratingParam}`;
+};
+
 export const fetchMoviesWithFilters = createAsyncThunk<
   IMoviesResponse<IMovie>,
   number
 >("movies/fetchMoviesWithFilters", async (page, { getState }) => {
   const state = getState() as { movies: TMovieSliceState };
-  const { genres, years, rating } = state.movies.filters;
-
-  let apiUrl = `${API.moviesBaseUrl}?page=${page}&limit=50&notNullFields=poster.url`;
-
-  if (genres.length > 0) {
-    genres.forEach((genre) => {
-      apiUrl += `&genres.name=${genre}`;
-    });
-  }
-
-  if (years.length > 0) {
-    years.forEach((year) => {
-      apiUrl += `&year=${year}`;
-    });
-  }
-
-  if (rating[0] !== 0 || rating[1] !== 10) {
-    apiUrl += `&rating.imdb=${rating[0]}-${rating[1]}`;
-  }
+  const apiUrl = buildApiUrl(page, state.movies.filters);
 
   const response = await request<IMoviesResponse<IMovie>>(apiUrl, {
     method: "GET",
@@ -78,10 +73,9 @@ export const movieSlice = createSlice({
     setCurrentPage: (state, action: PayloadAction<number>) => {
       state.currentPage = action.payload;
     },
-    //Фильтрация фильмов на стороне клиента
     filteredMoviesByName: (state, action: PayloadAction<string>) => {
       const searchTerm = action.payload.toLowerCase();
-      state.movies = [...state.filteredMovies].filter((movie) => {
+      state.movies = state.filteredMovies.filter((movie) => {
         return (
           (movie.name && movie.name.toLowerCase().includes(searchTerm)) ||
           (movie.alternativeName &&
@@ -104,22 +98,31 @@ export const movieSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
+    const handlePending = (state: TMovieSliceState) => {
+      state.getMoviesRequestFailed = false;
+      state.getMoviesRequestLoading = true;
+    };
+
+    const handleFulfilled = (
+      state: TMovieSliceState,
+      action: PayloadAction<IMoviesResponse<IMovie>>
+    ) => {
+      state.getMoviesRequestLoading = false;
+      state.movies = action.payload.docs;
+      state.totalPages = action.payload.pages;
+      state.filteredMovies = action.payload.docs;
+      state.currentPage = action.payload.page;
+    };
+
+    const handleRejected = (state: TMovieSliceState) => {
+      state.getMoviesRequestLoading = false;
+      state.getMoviesRequestFailed = true;
+    };
+
     builder
-      .addCase(fetchMoviesWithFilters.pending, (state) => {
-        state.getMoviesRequestFailed = false;
-        state.getMoviesRequestLoading = true;
-      })
-      .addCase(fetchMoviesWithFilters.fulfilled, (state, action) => {
-        state.getMoviesRequestLoading = false;
-        state.movies = action.payload.docs;
-        state.totalPages = action.payload.pages;
-        state.filteredMovies = action.payload.docs;
-        state.currentPage = action.payload.page;
-      })
-      .addCase(fetchMoviesWithFilters.rejected, (state) => {
-        state.getMoviesRequestLoading = false;
-        state.getMoviesRequestFailed = true;
-      });
+      .addCase(fetchMoviesWithFilters.pending, handlePending)
+      .addCase(fetchMoviesWithFilters.fulfilled, handleFulfilled)
+      .addCase(fetchMoviesWithFilters.rejected, handleRejected);
   },
 });
 

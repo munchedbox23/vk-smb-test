@@ -7,9 +7,11 @@ import InputLabel from "@mui/material/InputLabel";
 import { PrimaryButton } from "../../ui/PrimaryButton/PrimaryButton";
 import { Genre } from "../../utils/genres";
 import { useAppDispatch, useAppSelector } from "../../services/store/hooks";
-import { fetchMoviesWithFilters } from "../../services/features/movies/movieSlice";
+import {
+  fetchMoviesWithFilters,
+  setFilters,
+} from "../../services/features/movies/movieSlice";
 import { pageNum } from "../../services/features/movies/movieSelectors";
-import { setFilters } from "../../services/features/movies/movieSlice";
 
 export const FilterMovieBlock: FC = () => {
   const dispatch = useAppDispatch();
@@ -25,16 +27,11 @@ export const FilterMovieBlock: FC = () => {
     (state) => state.movies.filters
   );
 
-  const handleGenreChange = (value: string[]) => {
-    dispatch(setFilters({ genres: value, years, rating }));
-  };
-
-  const handleYearChange = (value: string[]) => {
-    dispatch(setFilters({ genres, years: value, rating }));
-  };
-
-  const handleRatingChange = (event: Event, newValue: number | number[]) => {
-    dispatch(setFilters({ genres, years, rating: newValue as number[] }));
+  const handleFilterChange = (
+    filterType: string,
+    value: string[] | number[]
+  ) => {
+    dispatch(setFilters({ ...{ genres, years, rating }, [filterType]: value }));
   };
 
   const handleApplyFilters = (e: FormEvent<HTMLFormElement>) => {
@@ -49,13 +46,13 @@ export const FilterMovieBlock: FC = () => {
           options={options}
           label="Жанры"
           value={genres}
-          onChange={handleGenreChange}
+          onChange={(value) => handleFilterChange("genres", value)}
         />
         <CustomSelect
           options={optionYears}
           label="Годы"
           value={years}
-          onChange={handleYearChange}
+          onChange={(value) => handleFilterChange("years", value)}
         />
         <Box sx={{ width: "100%" }}>
           <InputLabel
@@ -72,7 +69,9 @@ export const FilterMovieBlock: FC = () => {
             min={0}
             max={10}
             value={rating}
-            onChange={handleRatingChange}
+            onChange={(event, value) =>
+              handleFilterChange("rating", value as number[])
+            }
           />
         </Box>
         <PrimaryButton buttonType="submit">Применить</PrimaryButton>

@@ -20,30 +20,11 @@ const CustomSelect: React.FC<CustomSelectProps> = ({
 }) => {
   const [isFocused, setIsFocused] = React.useState(false);
 
-  const ITEM_HEIGHT = 28;
-  const ITEM_PADDING_TOP = 8;
-  const MenuProps = {
-    PaperProps: {
-      style: {
-        maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-        width: 250,
-      },
-    },
-  };
-
   const handleChange = (event: SelectChangeEvent<typeof value>) => {
     const {
       target: { value },
     } = event;
     onChange(typeof value === "string" ? value.split(",") : value);
-  };
-
-  const handleFocus = () => {
-    setIsFocused(true);
-  };
-
-  const handleBlur = () => {
-    setIsFocused(false);
   };
 
   return (
@@ -67,10 +48,17 @@ const CustomSelect: React.FC<CustomSelectProps> = ({
         multiple
         value={value}
         onChange={handleChange}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
+        onFocus={() => setIsFocused(true)}
+        onBlur={() => setIsFocused(false)}
         input={<OutlinedInput label={label} />}
-        MenuProps={MenuProps}
+        MenuProps={{
+          PaperProps: {
+            style: {
+              maxHeight: 28 * 4.5 + 8,
+              width: 250,
+            },
+          },
+        }}
         sx={{ height: 36, backgroundColor: "var(--steel-gray---40)" }}
       >
         {options.map((option) => (

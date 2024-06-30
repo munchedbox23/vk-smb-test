@@ -1,8 +1,16 @@
 import { IMovie, IMovieWithUser } from "./../types/movie-types";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useAppSelector } from "../services/store/hooks";
 import { useNavigate } from "react-router";
 import { ROUTE } from "../utils/constants";
+
+const getStoredFavourites = () => {
+  return JSON.parse(localStorage.getItem("favourites") || "[]");
+};
+
+const setStoredFavourites = (favourites: IMovieWithUser[]) => {
+  localStorage.setItem("favourites", JSON.stringify(favourites));
+};
 
 export const useFavoriteMovie = (movie: IMovie | null) => {
   const user = useAppSelector((store) => store.user.user);
@@ -11,9 +19,7 @@ export const useFavoriteMovie = (movie: IMovie | null) => {
 
   useEffect(() => {
     if (movie && user) {
-      const storedFavourites = JSON.parse(
-        localStorage.getItem("favourites") || "[]"
-      );
+      const storedFavourites = getStoredFavourites();
       setIsFavorite(
         storedFavourites.some(
           (fav: IMovieWithUser) =>
@@ -23,15 +29,14 @@ export const useFavoriteMovie = (movie: IMovie | null) => {
     }
   }, [movie, user]);
 
-  const toggleFavorite = () => {
+  const toggleFavorite = useCallback(() => {
     if (!user) {
       navigate(`/${ROUTE.mainLayout.login}`);
+      return;
     }
 
     if (movie && user) {
-      const storedFavourites = JSON.parse(
-        localStorage.getItem("favourites") || "[]"
-      );
+      const storedFavourites = getStoredFavourites();
       const index = storedFavourites.findIndex(
         (fav: IMovieWithUser) => fav.id === movie.id && fav.user === user.email
       );
@@ -44,9 +49,9 @@ export const useFavoriteMovie = (movie: IMovie | null) => {
         setIsFavorite(false);
       }
 
-      localStorage.setItem("favourites", JSON.stringify(storedFavourites));
+      setStoredFavourites(storedFavourites);
     }
-  };
+  }, [movie, user, navigate]);
 
   return { isFavorite, toggleFavorite };
 };

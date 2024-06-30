@@ -17,7 +17,7 @@ export const MovieList: FC<PropsWithChildren<{ movies: IMovie[] }>> = ({
         </ul>
       ) : (
         <strong className={movieStyles.sorryMessage}>
-          К сожаление, сервис не смог найти ни одного фильма по вашему запросу
+          К сожалению, сервис не смог найти ни одного фильма по вашему запросу
         </strong>
       )}
       {children}

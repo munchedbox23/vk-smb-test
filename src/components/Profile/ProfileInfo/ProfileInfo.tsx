@@ -44,7 +44,7 @@ export const ProfileInfo: FC = () => {
               placeholder="Имя"
               name="name"
               autoComplete="name"
-              value={formState?.name || ""}
+              value={formState.name || ""}
               onChange={onChange}
             />
             <Input
@@ -52,14 +52,14 @@ export const ProfileInfo: FC = () => {
               placeholder="Логин"
               name="email"
               autoComplete="email"
-              value={formState?.email || ""}
+              value={formState.email || ""}
               onChange={onChange}
             />
             <Input
               type="password"
               name="password"
               autoComplete="new-password"
-              value={formState?.password || ""}
+              value={formState.password || ""}
               onChange={onChange}
             />
             <PrimaryButton buttonType="submit">

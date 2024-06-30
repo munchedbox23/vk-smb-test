@@ -14,8 +14,6 @@ export interface IRating {
   await: number;
 }
 
-export interface IVotes extends IRating {}
-
 export interface IPoster {
   url: string;
   previewUrl: string;
@@ -31,33 +29,33 @@ export interface ICountry {
 
 export interface ReleaseYear {
   start: number;
-  end: number | null;
+  end?: number;
 }
 
 export interface IMovie {
-  ageRating: number | null;
-  alternativeName: string | null;
-  countries?: Array<ICountry>;
-  description: string | null;
-  genres: Array<IGenre>;
+  ageRating?: number;
+  alternativeName?: string;
+  countries?: ICountry[];
+  description?: string;
+  genres: IGenre[];
   id: number;
   isSeries: boolean;
-  movieLength: number | null;
-  name: string | null;
+  movieLength?: number;
+  name?: string;
   poster: IPoster;
   rating: IRating;
-  ratingMpaa: number | null;
-  releaseYears: Array<ReleaseYear>;
-  seriesLength: number | null;
-  shortDescription: string | null;
-  status: string | null;
+  ratingMpaa?: number;
+  releaseYears: ReleaseYear[];
+  seriesLength?: number;
+  shortDescription?: string;
+  status?: string;
   ticketsOnSale: boolean;
-  top10: number | null;
-  top250: number | null;
-  totalSeriesLength: number | null;
+  top10?: number;
+  top250?: number;
+  totalSeriesLength?: number;
   type: "movie" | "tv-series" | "cartoon" | "anime" | "animated-series";
   typeNumber: number;
-  votes: IVotes;
+  votes: IRating;
   year: number;
 }
 
