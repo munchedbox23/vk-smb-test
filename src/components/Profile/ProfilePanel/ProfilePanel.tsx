@@ -6,8 +6,9 @@ import { HeaderLink } from "../../HeaderLink/HeaderLink";
 import { ROUTE } from "../../../utils/constants";
 import { userLogout } from "../../../services/features/user/auth";
 import { useLocation, useNavigate } from "react-router";
+import { FC } from "react";
 
-export const ProfilePanel = () => {
+export const ProfilePanel: FC = () => {
   const user = useAppSelector((store) => store.user.user);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ export const ProfilePanel = () => {
     {
       id: 2,
       name: "Избранное",
-      route: `/${ROUTE.mainLayout.favouritesMovies}`,
+      route: `/${ROUTE.mainLayout.profile}/${ROUTE.mainLayout.favouritesMovies}`,
     },
   ];
 
@@ -26,6 +27,14 @@ export const ProfilePanel = () => {
     dispatch(userLogout())
       .then(() => navigate(`/${ROUTE.mainLayout.login}`, { replace: true }))
       .catch((error) => console.error(error));
+  };
+
+  const getDescription = (): string => {
+    if (location.pathname.endsWith(ROUTE.mainLayout.profile)) {
+      return "В этом разделе вы можете изменить свои персональные данные";
+    } else {
+      return "В этом разделе вы можете посмотреть свои любимые фильмы";
+    }
   };
 
   return (
@@ -54,11 +63,7 @@ export const ProfilePanel = () => {
             <span> Выйти из профиля</span>
           </button>
         </ul>
-        <p className={profileStyles.description}>
-          {location.pathname.endsWith(ROUTE.mainLayout.profile)
-            ? "В этом разделе вы можете изменить свои персональные данные"
-            : "В этом разделе вы можете посмотреть свои любимые фильмы"}
-        </p>
+        <p className={profileStyles.description}>{getDescription()}</p>
       </div>
     </aside>
   );

@@ -10,3 +10,9 @@
   font-size: 16px;
   margin-right: 8px;
 }
+
+.linkContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

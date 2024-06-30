@@ -3,47 +3,60 @@ import { ROUTE } from "../../../utils/constants";
 import styles from "./AuthLinks.module.css";
 import { Link } from "react-router-dom";
 
-export const LoginLinks: FC = (): JSX.Element => {
+type AuthLinkProps = {
+  question: string;
+  linkText: string;
+  route: string;
+};
+
+const AuthLink: FC<AuthLinkProps> = ({ question, linkText, route }) => {
+  return (
+    <div className={styles.linkContent}>
+      <span className={styles.linkQuestion}>{question}</span>
+      <Link className={styles.link} to={`/${route}`}>
+        {linkText}
+      </Link>
+    </div>
+  );
+};
+
+export const LoginLinks: FC = () => {
   return (
     <main className={styles.links}>
-      <div className={styles.linkContent}>
-        <span className={styles.linkQuestion}>Вы - новый пользователь?</span>
-        <Link className={styles.link} to={`/${ROUTE.mainLayout.register}`}>
-          Зарегистрироваться
-        </Link>
-      </div>
-      <div className={styles.linkContent}>
-        <span className={styles.linkQuestion}>Забыли пароль?</span>
-        <Link className={styles.link} to={`/${ROUTE.mainLayout.forgotPass}`}>
-          Восстановить пароль
-        </Link>
-      </div>
+      <AuthLink
+        question="Вы - новый пользователь?"
+        linkText="Зарегистрироваться"
+        route={ROUTE.mainLayout.register}
+      />
+      <AuthLink
+        question="Забыли пароль?"
+        linkText="Восстановить пароль"
+        route={ROUTE.mainLayout.forgotPass}
+      />
     </main>
   );
 };
 
-export const RegisterLinks: FC = (): JSX.Element => {
+export const RegisterLinks: FC = () => {
   return (
     <main className={styles.links}>
-      <div className={styles.linkContent}>
-        <span className={styles.linkQuestion}>Уже зарегистрированы?</span>
-        <Link className={styles.link} to={`/${ROUTE.mainLayout.login}`}>
-          Войти
-        </Link>
-      </div>
+      <AuthLink
+        question="Уже зарегистрированы?"
+        linkText="Войти"
+        route={ROUTE.mainLayout.login}
+      />
     </main>
   );
 };
 
-export const ForgotLinks: FC = (): JSX.Element => {
+export const ForgotLinks: FC = () => {
   return (
     <main className={styles.links}>
-      <div className={styles.linkContent}>
-        <span className={styles.linkQuestion}>Вспомнили пароль?</span>
-        <Link className={styles.link} to={`/${ROUTE.mainLayout.login}`}>
-          Войти
-        </Link>
-      </div>
+      <AuthLink
+        question="Вспомнили пароль?"
+        linkText="Войти"
+        route={ROUTE.mainLayout.login}
+      />
     </main>
   );
 };

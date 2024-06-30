@@ -11,6 +11,7 @@ export const HeaderLink: FC<THeaderLinkProps> = ({ route, textLink }) => {
   return (
     <NavLink
       to={route}
+      end
       className={({ isActive }) =>
         `${styles.navLink} ${isActive && styles.primary}`
       }
