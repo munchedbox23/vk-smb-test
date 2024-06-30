@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/vk-smb-test/static/css/main.1d28fad5.css",
+    "main.js": "/vk-smb-test/static/js/main.55903d6a.js",
+    "static/media/SFProText-Bold.ttf": "/vk-smb-test/static/media/SFProText-Bold.9dae2991f4fb30a5f7e0.ttf",
+    "static/media/SFProText-Semibold.ttf": "/vk-smb-test/static/media/SFProText-Semibold.fee27977166efaac0a2a.ttf",
+    "static/media/SFProText-Medium.ttf": "/vk-smb-test/static/media/SFProText-Medium.fc3c323b3b2bb1c643ee.ttf",
+    "static/media/SFProText-Regular.ttf": "/vk-smb-test/static/media/SFProText-Regular.90da7ab18293ca42e335.ttf",
+    "static/media/vk-logo.png": "/vk-smb-test/static/media/vk-logo.bc7f23eb7475620ffbf7.png",
+    "index.html": "/vk-smb-test/index.html",
+    "static/media/logo.svg": "/vk-smb-test/static/media/logo.5332f8718331ad55373169d8d9951118.svg",
+    "main.1d28fad5.css.map": "/vk-smb-test/static/css/main.1d28fad5.css.map",
+    "main.55903d6a.js.map": "/vk-smb-test/static/js/main.55903d6a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1d28fad5.css",
+    "static/js/main.55903d6a.js"
+  ]
+}
