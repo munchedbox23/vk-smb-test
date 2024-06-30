@@ -121,7 +121,7 @@ describe("testing movie slice", () => {
         method: "GET",
         headers: {
           "Content-type": "application/json",
-          "X-API-KEY": "J5TFEXC-RDAM6A8-HKNPQGV-M7PSC7C",
+          "X-API-KEY": "4T6X7R1-FAY4CK5-QEV5B3M-TJBP5QK",
         },
       }
     );
