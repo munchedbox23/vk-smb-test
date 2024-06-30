@@ -1,16 +1,34 @@
 import styles from "./Movie.module.css";
-import { useAppSelector } from "../../services/store/hooks";
-import { selectedMovie } from "../../services/features/movies/movieSelectors";
-import { FC } from "react";
+import { useAppDispatch, useAppSelector } from "../../services/store/hooks";
+import {
+  selectedMovie,
+  moviesLoadingStatus,
+} from "../../services/features/movies/movieSelectors";
+import { FC, useEffect } from "react";
 import BookmarksIcon from "@mui/icons-material/Bookmarks";
 import { PrimaryButton } from "../../ui/PrimaryButton/PrimaryButton";
 import { IGenre, IRating } from "../../types/movie-types";
 import CheckIcon from "@mui/icons-material/Check";
 import { useFavoriteMovie } from "../../hooks/useFavoriteMovie";
+import { useParams } from "react-router";
+import { fetchMovieById } from "../../services/features/movies/movieSlice";
+import { Preloader } from "../../ui/Preloader/Preloader";
 
 export const Movie: FC = () => {
   const currentMovie = useAppSelector(selectedMovie);
+  const dispatch = useAppDispatch();
   const { isFavorite, toggleFavorite } = useFavoriteMovie(currentMovie);
+  const getMoviesRequestLoading = useAppSelector(moviesLoadingStatus);
+  const { movieId } = useParams<string>();
+
+  useEffect(() => {
+    if (movieId) {
+      const id = parseInt(movieId, 10);
+      if (!isNaN(id)) {
+        dispatch(fetchMovieById(id));
+      }
+    }
+  }, [dispatch, movieId]);
 
   const movieDetails: {
     id: number;
@@ -36,39 +54,47 @@ export const Movie: FC = () => {
 
   return (
     <article className={styles.moviePage}>
-      <div className={styles.imageContainer}>
-        <img
-          className={styles.moviePoster}
-          src={currentMovie?.poster.url}
-          alt="Постер выбранного фильма"
-        />
-      </div>
-      <section className={styles.movieInfo}>
-        <h1>{currentMovie?.name ?? currentMovie?.alternativeName}</h1>
-        <PrimaryButton buttonType="button" onClick={toggleFavorite}>
-          {isFavorite ? <CheckIcon /> : <BookmarksIcon />}
-          {isFavorite ? "В избранном" : "В избранное"}
-        </PrimaryButton>
-        <p className={styles.movieDescription}>{currentMovie?.description}</p>
-        <div className={styles.details}>
-          {movieDetails.map((item) => (
-            <div key={item.id} className={styles.detailWrapper}>
-              <h5>{item.rowName}</h5>
-              {item.rowValue instanceof Array ? (
-                <ul className={styles.genreArray}>
-                  {item.rowValue.map((genre, index) => (
-                    <li className={styles.genre} key={index}>
-                      {genre.name}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p>{item.rowValue.toString()}</p>
-              )}
+      {getMoviesRequestLoading ? (
+        <Preloader />
+      ) : (
+        <>
+          <div className={styles.imageContainer}>
+            <img
+              className={styles.moviePoster}
+              src={currentMovie?.poster.url}
+              alt="Постер выбранного фильма"
+            />
+          </div>
+          <section className={styles.movieInfo}>
+            <h1>{currentMovie?.name ?? currentMovie?.alternativeName}</h1>
+            <PrimaryButton buttonType="button" onClick={toggleFavorite}>
+              {isFavorite ? <CheckIcon /> : <BookmarksIcon />}
+              {isFavorite ? "В избранном" : "В избранное"}
+            </PrimaryButton>
+            <p className={styles.movieDescription}>
+              {currentMovie?.description}
+            </p>
+            <div className={styles.details}>
+              {movieDetails.map((item) => (
+                <div key={item.id} className={styles.detailWrapper}>
+                  <h5>{item.rowName}</h5>
+                  {item.rowValue instanceof Array ? (
+                    <ul className={styles.genreArray}>
+                      {item.rowValue.map((genre, index) => (
+                        <li className={styles.genre} key={index}>
+                          {genre.name}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>{item.rowValue.toString()}</p>
+                  )}
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </section>
+          </section>
+        </>
+      )}
     </article>
   );
 };

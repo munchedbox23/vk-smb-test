@@ -5,8 +5,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import { setSelectedMovie } from "../../services/features/movies/movieSlice";
-import { useAppDispatch } from "../../services/store/hooks";
 import { useFavoriteMovie } from "../../hooks/useFavoriteMovie";
 
 type TMovieCardProps = {
@@ -15,13 +13,11 @@ type TMovieCardProps = {
 
 export const MovieCard: FC<TMovieCardProps> = ({ data }) => {
   const navigate = useNavigate();
-  const dispatch = useAppDispatch();
   const location = useLocation();
   const { isFavorite, toggleFavorite } = useFavoriteMovie(data);
 
   const handleChooseMovie = (): void => {
     navigate(`/movies/${data.id}`, { state: { from: location.pathname } });
-    dispatch(setSelectedMovie(data));
   };
 
   const handleFavoriteClick = (e: MouseEvent<HTMLButtonElement>) => {

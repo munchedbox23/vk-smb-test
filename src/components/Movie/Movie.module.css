@@ -4,6 +4,7 @@
   flex-direction: row;
   gap: 2rem;
   padding-bottom: 40px;
+  position: relative;
 }
 
 .imageContainer {

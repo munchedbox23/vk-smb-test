@@ -66,6 +66,20 @@ export const fetchMoviesWithFilters = createAsyncThunk<
   return response;
 });
 
+export const fetchMovieById = createAsyncThunk<IMovie, number>(
+  "movies/fetchMovieById",
+  async (movieId) => {
+    const response = await request<IMovie>(`${API.moviesBaseUrl}/${movieId}`, {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json",
+        "X-API-KEY": API_KEY,
+      },
+    });
+    return response;
+  }
+);
+
 export const movieSlice = createSlice({
   name: "movies",
   initialState,
@@ -82,9 +96,6 @@ export const movieSlice = createSlice({
             movie.alternativeName.toLowerCase().includes(searchTerm))
         );
       });
-    },
-    setSelectedMovie: (state, action: PayloadAction<IMovie>) => {
-      state.selectedMovie = action.payload;
     },
     setFilters: (
       state,
@@ -122,14 +133,16 @@ export const movieSlice = createSlice({
     builder
       .addCase(fetchMoviesWithFilters.pending, handlePending)
       .addCase(fetchMoviesWithFilters.fulfilled, handleFulfilled)
-      .addCase(fetchMoviesWithFilters.rejected, handleRejected);
+      .addCase(fetchMoviesWithFilters.rejected, handleRejected)
+      .addCase(fetchMovieById.pending, handlePending)
+      .addCase(fetchMovieById.fulfilled, (state, action) => {
+        state.selectedMovie = action.payload;
+        state.getMoviesRequestLoading = false;
+      })
+      .addCase(fetchMovieById.rejected, handleRejected);
   },
 });
 
-export const {
-  setCurrentPage,
-  filteredMoviesByName,
-  setSelectedMovie,
-  setFilters,
-} = movieSlice.actions;
+export const { setCurrentPage, filteredMoviesByName, setFilters } =
+  movieSlice.actions;
 export default movieSlice.reducer;

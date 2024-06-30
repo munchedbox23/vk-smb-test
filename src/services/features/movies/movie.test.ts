@@ -2,9 +2,9 @@ import movieReducer, {
   initialState,
   setCurrentPage,
   filteredMoviesByName,
-  setSelectedMovie,
   setFilters,
   fetchMoviesWithFilters,
+  fetchMovieById,
 } from "./movieSlice";
 import {
   mockMovie,
@@ -48,7 +48,12 @@ describe("testing movie slice", () => {
   });
 
   it("should handle set selectedMovie", () => {
-    expect(movieReducer(initialState, setSelectedMovie(mockMovie))).toEqual({
+    expect(
+      movieReducer(initialState, {
+        type: fetchMovieById.fulfilled.type,
+        payload: mockMovie,
+      })
+    ).toEqual({
       ...initialState,
       selectedMovie: mockMovie,
     });
