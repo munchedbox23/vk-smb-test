@@ -11,6 +11,7 @@ import { setCurrentPage } from "../../services/features/movies/movieSlice";
 import { fetchMoviesWithFilters } from "../../services/features/movies/movieSlice";
 
 export const MovieList: FC = () => {
+  const totalPages = useAppSelector((store) => store.movies.totalPages);
   const movies = useAppSelector(selectMovies);
   const dispatch = useAppDispatch();
   const currentPage = useAppSelector(pageNum);
@@ -36,7 +37,11 @@ export const MovieList: FC = () => {
           К сожаление, сервис не смог найти ни одного фильма по вашему запросу
         </strong>
       )}
-      <Pagination count={2000} page={currentPage} onChange={handlePageChange} />
+      <Pagination
+        count={totalPages}
+        page={currentPage}
+        onChange={handlePageChange}
+      />
     </article>
   );
 };

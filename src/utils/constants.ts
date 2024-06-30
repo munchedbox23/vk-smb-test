@@ -34,7 +34,7 @@ export const ROUTE: IRoutes = {
   mainLayout: {
     movie: "movies",
     currentMovie: "movies/:movieId",
-    favouritesMovies: "films/favourites",
+    favouritesMovies: "favourites",
     login: "login",
     register: "register",
     resetPass: "reset-password",
@@ -52,6 +52,6 @@ export const navLinks: Array<INavLink> = [
   {
     id: 2,
     name: "Избранное",
-    route: `/${ROUTE.mainLayout.favouritesMovies}`,
+    route: `/${ROUTE.mainLayout.profile}/${ROUTE.mainLayout.favouritesMovies}`,
   },
 ];

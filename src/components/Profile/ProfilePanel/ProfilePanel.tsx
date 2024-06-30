@@ -19,7 +19,7 @@ export const ProfilePanel: FC = () => {
     {
       id: 2,
       name: "Избранное",
-      route: `/${ROUTE.mainLayout.favouritesMovies}`,
+      route: `/${ROUTE.mainLayout.profile}/${ROUTE.mainLayout.favouritesMovies}`,
     },
   ];
 

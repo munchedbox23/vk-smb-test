@@ -11,6 +11,7 @@ type TMovieSliceState = {
   getMoviesRequestFailed: boolean;
   getMoviesRequestLoading: boolean;
   currentPage: number;
+  totalPages: number;
   selectedMovie: IMovie | null;
   filters: {
     genres: string[];
@@ -25,6 +26,7 @@ export const initialState: TMovieSliceState = {
   getMoviesRequestLoading: false,
   getMoviesRequestFailed: false,
   currentPage: 1,
+  totalPages: 1,
   selectedMovie: null,
   filters: {
     genres: [],
@@ -110,6 +112,7 @@ export const movieSlice = createSlice({
       .addCase(fetchMoviesWithFilters.fulfilled, (state, action) => {
         state.getMoviesRequestLoading = false;
         state.movies = action.payload.docs;
+        state.totalPages = action.payload.pages;
         state.filteredMovies = action.payload.docs;
         state.currentPage = action.payload.page;
       })

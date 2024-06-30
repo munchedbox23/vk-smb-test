@@ -4,7 +4,7 @@ import { useAppSelector } from "../services/store/hooks";
 import { useNavigate } from "react-router";
 import { ROUTE } from "../utils/constants";
 
-export const useFavouriteMovie = (movie: IMovie | null) => {
+export const useFavoriteMovie = (movie: IMovie | null) => {
   const user = useAppSelector((store) => store.user.user);
   const navigate = useNavigate();
   const [isFavorite, setIsFavorite] = useState(false);

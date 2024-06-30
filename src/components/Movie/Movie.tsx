@@ -6,11 +6,11 @@ import BookmarksIcon from "@mui/icons-material/Bookmarks";
 import { PrimaryButton } from "../../ui/PrimaryButton/PrimaryButton";
 import { IGenre, IRating } from "../../types/movie-types";
 import CheckIcon from "@mui/icons-material/Check";
-import { useFavouriteMovie } from "../../hooks/useFavouriteMovie";
+import { useFavoriteMovie } from "../../hooks/useFavoriteMovie";
 
 export const Movie: FC = () => {
   const currentMovie = useAppSelector(selectedMovie);
-  const { isFavorite, toggleFavorite } = useFavouriteMovie(currentMovie);
+  const { isFavorite, toggleFavorite } = useFavoriteMovie(currentMovie);
 
   const movieDetails: {
     id: number;

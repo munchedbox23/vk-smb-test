@@ -23,7 +23,7 @@ export const AppHeader: FC = () => {
   return (
     <header id="page-header" className={headerStyles.header}>
       <div className={headerStyles.headerWrapper}>
-        <Link target="_blank" to={ROUTE.home}>
+        <Link to={ROUTE.home}>
           <img
             src={vkLogo}
             alt="Логотип Вконтакте"

@@ -7,7 +7,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { setSelectedMovie } from "../../services/features/movies/movieSlice";
 import { useAppDispatch } from "../../services/store/hooks";
-import { useFavouriteMovie } from "../../hooks/useFavouriteMovie";
+import { useFavoriteMovie } from "../../hooks/useFavoriteMovie";
 
 type TMovieCardProps = {
   data: IMovie;
@@ -17,7 +17,7 @@ export const MovieCard: FC<TMovieCardProps> = ({ data }) => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const location = useLocation();
-  const { isFavorite, toggleFavorite } = useFavouriteMovie(data);
+  const { isFavorite, toggleFavorite } = useFavoriteMovie(data);
 
   const handleChooseMovie = (): void => {
     navigate(`/movies/${data.id}`, { state: { from: location.pathname } });
