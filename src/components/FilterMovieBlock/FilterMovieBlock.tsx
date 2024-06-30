@@ -41,7 +41,11 @@ export const FilterMovieBlock: FC = () => {
 
   return (
     <aside className={styles.filterBlock}>
-      <form onSubmit={handleApplyFilters} className={styles.filterForm}>
+      <form
+        data-cy="filter-form"
+        onSubmit={handleApplyFilters}
+        className={styles.filterForm}
+      >
         <CustomSelect
           options={options}
           label="Жанры"

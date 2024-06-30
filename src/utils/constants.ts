@@ -34,7 +34,7 @@ export const ROUTE: IRoutes = {
   mainLayout: {
     movie: "movies",
     currentMovie: "movies/:movieId",
-    favouritesMovies: "favourites",
+    favouritesMovies: "favorites",
     login: "login",
     register: "register",
     resetPass: "reset-password",

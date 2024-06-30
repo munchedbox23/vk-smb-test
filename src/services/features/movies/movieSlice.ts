@@ -3,7 +3,7 @@ import { request } from "../../../utils/requests";
 import { API } from "../../../utils/constants";
 import { IMovie, IMoviesResponse } from "../../../types/movie-types";
 
-const API_KEY = "J5TFEXC-RDAM6A8-HKNPQGV-M7PSC7C";
+const API_KEY = "FGJZTT0-J0K49NN-Q2RPKZ0-9SCNVMM";
 
 type TMovieSliceState = {
   movies: IMovie[];

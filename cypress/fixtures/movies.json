@@ -1,0 +1,1630 @@
+{
+  "docs": [
+    {
+      "id": 5698653,
+      "name": null,
+      "alternativeName": "Fantasmas",
+      "type": "tv-series",
+      "typeNumber": 2,
+      "year": 2024,
+      "description": null,
+      "shortDescription": null,
+      "status": null,
+      "rating": {
+        "kp": 0,
+        "imdb": 6.8,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 57,
+        "imdb": 450,
+        "filmCritics": 0,
+        "russianFilmCritics": 1,
+        "await": 0
+      },
+      "movieLength": null,
+      "totalSeriesLength": null,
+      "seriesLength": null,
+      "ratingMpaa": null,
+      "ageRating": null,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/4716873/d036aec6-ad71-446b-8fb0-a94ebefa908f/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/4716873/d036aec6-ad71-446b-8fb0-a94ebefa908f/x1000"
+      },
+      "genres": [
+        {
+          "name": "комедия"
+        }
+      ],
+      "countries": [
+        {
+          "name": "США"
+        }
+      ],
+      "releaseYears": [
+        {
+          "start": 2024,
+          "end": null
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": true,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5921398,
+      "name": "Гатчина. Молчание Сильвии",
+      "alternativeName": null,
+      "enName": null,
+      "type": "movie",
+      "typeNumber": 1,
+      "year": 2024,
+      "description": "История 867 дней фашистской оккупации Гатчины в годы Великой Отечественной войны.",
+      "shortDescription": "Зверства фашистских захватчиков в оккупированном Красногвардейске. Исторический док с Владимиром Машковым",
+      "status": null,
+      "rating": {
+        "kp": 8.585,
+        "imdb": 0,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": null
+      },
+      "votes": {
+        "kp": 1167,
+        "imdb": 0,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": null,
+      "totalSeriesLength": null,
+      "seriesLength": null,
+      "ratingMpaa": null,
+      "ageRating": 18,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/4486362/1f4d138a-9779-4624-9ee7-2b2c729a5a5a/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/4486362/1f4d138a-9779-4624-9ee7-2b2c729a5a5a/x1000"
+      },
+      "backdrop": {
+        "url": "https://image.openmoviedb.com/kinopoisk-ott-images/1652588/2a000001903b3fb430b644029e59ca7d66b3/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-ott-images/1652588/2a000001903b3fb430b644029e59ca7d66b3/x1000"
+      },
+      "genres": [
+        {
+          "name": "документальный"
+        },
+        {
+          "name": "военный"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Россия"
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": false,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5613500,
+      "name": "Ангелы тоже падают",
+      "alternativeName": "Xie xie ni wen nuan wo",
+      "type": "tv-series",
+      "typeNumber": 2,
+      "year": 2024,
+      "description": null,
+      "shortDescription": null,
+      "status": "completed",
+      "rating": {
+        "kp": 0,
+        "imdb": 8.8,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 14,
+        "imdb": 57,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": null,
+      "totalSeriesLength": null,
+      "seriesLength": 45,
+      "ratingMpaa": null,
+      "ageRating": null,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/4486362/32654f3d-6da2-4630-9d97-eaf12564e990/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/4486362/32654f3d-6da2-4630-9d97-eaf12564e990/x1000"
+      },
+      "genres": [
+        {
+          "name": "мелодрама"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Китай"
+        }
+      ],
+      "releaseYears": [
+        {
+          "start": 2024,
+          "end": 2024
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": true,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5613034,
+      "name": "Два холма. Фильм о фильме",
+      "alternativeName": null,
+      "enName": null,
+      "type": "movie",
+      "typeNumber": 1,
+      "year": 2022,
+      "description": "История создания сериала «Два холма».",
+      "shortDescription": null,
+      "status": null,
+      "rating": {
+        "kp": 0,
+        "imdb": 0,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 11,
+        "imdb": 0,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": 27,
+      "totalSeriesLength": null,
+      "seriesLength": null,
+      "ratingMpaa": null,
+      "ageRating": 18,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/10592371/85b632e1-e683-46be-8baf-8f60d8aa32c8/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/10592371/85b632e1-e683-46be-8baf-8f60d8aa32c8/x1000"
+      },
+      "genres": [
+        {
+          "name": "документальный"
+        },
+        {
+          "name": "короткометражка"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Россия"
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": false,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5632559,
+      "name": null,
+      "alternativeName": "Mind Body Spirit",
+      "enName": null,
+      "type": "movie",
+      "typeNumber": 1,
+      "year": 2023,
+      "description": null,
+      "shortDescription": null,
+      "status": null,
+      "rating": {
+        "kp": 0,
+        "imdb": 5.5,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 12,
+        "imdb": 132,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": 85,
+      "totalSeriesLength": null,
+      "seriesLength": null,
+      "ratingMpaa": null,
+      "ageRating": null,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/10809116/6c160185-eadc-48b7-a404-0871583ec3aa/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/10809116/6c160185-eadc-48b7-a404-0871583ec3aa/x1000"
+      },
+      "genres": [
+        {
+          "name": "ужасы"
+        }
+      ],
+      "countries": [
+        {
+          "name": "США"
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": false,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5884949,
+      "name": "Хаяо Миядзаки: Экстра",
+      "alternativeName": null,
+      "type": "tv-series",
+      "typeNumber": 2,
+      "year": 2018,
+      "description": "Сериал о жизни и творчестве Хаяо Миядзаки, легендарного японского аниматора. Анализируем скрытые смыслы мультфильмов и рассказываем историю их создания.",
+      "shortDescription": null,
+      "status": null,
+      "rating": {
+        "kp": 0,
+        "imdb": 0,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 3,
+        "imdb": 0,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": null,
+      "totalSeriesLength": null,
+      "seriesLength": null,
+      "ratingMpaa": null,
+      "ageRating": 18,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/4483445/0e9e59e2-a9cc-40a6-a0ad-0e4d1ae9ccc5/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/4483445/0e9e59e2-a9cc-40a6-a0ad-0e4d1ae9ccc5/x1000"
+      },
+      "backdrop": {
+        "url": "https://image.openmoviedb.com/kinopoisk-ott-images/1652588/2a000001902a2e060a3ee36d43a6de8f7aa3/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-ott-images/1652588/2a000001902a2e060a3ee36d43a6de8f7aa3/x1000"
+      },
+      "genres": [
+        {
+          "name": "документальный"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Россия"
+        }
+      ],
+      "releaseYears": [
+        {
+          "start": 2018,
+          "end": null
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": true,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5921502,
+      "name": "Мифические создания и как их готовят",
+      "alternativeName": "Jin tian de wan can jiu shi ni",
+      "type": "animated-series",
+      "typeNumber": 5,
+      "year": 2024,
+      "description": "Мо Бай — один из лучших учеников секты Тяньцзи, в которой все занимаются познанием и самосовершенствованием. Но кулинарные вопросы всегда волновали парнишку больше, чем философские. Случайная встреча с шеф-поваром-монстром по имени Сяо Хэй круто меняет его жизнь. Вместе они создают команду гурманов, которая отправляется в путешествие на поиски самых вкусных мифических созданий. Каждое из этих существ дарит им не только новый кулинарный опыт, но и интересную загадку. Правда, гурманы и не подозревают, какое древнее демоническое зло они пробудили — теперь оно тоже голодно и мечтает завладеть силой Мо Бая.",
+      "shortDescription": "Гурман сражается с монстрами, чтобы познать их на вкус. Бодрое аниме о самых безумных кулинарных экспериментах",
+      "status": null,
+      "rating": {
+        "kp": 0,
+        "imdb": 0,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 17,
+        "imdb": 0,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": null,
+      "totalSeriesLength": null,
+      "seriesLength": 14,
+      "ratingMpaa": null,
+      "ageRating": 18,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/4486454/f9974428-23a2-4c2f-828b-19f2c2e9c52a/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/4486454/f9974428-23a2-4c2f-828b-19f2c2e9c52a/x1000"
+      },
+      "backdrop": {
+        "url": "https://image.openmoviedb.com/kinopoisk-ott-images/1648503/2a0000019035abaa74d8050de1d31daf0f0e/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-ott-images/1648503/2a0000019035abaa74d8050de1d31daf0f0e/x1000"
+      },
+      "genres": [
+        {
+          "name": "мультфильм"
+        },
+        {
+          "name": "комедия"
+        },
+        {
+          "name": "фэнтези"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Китай"
+        }
+      ],
+      "releaseYears": [
+        {
+          "start": 2024,
+          "end": null
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": true,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5637606,
+      "name": null,
+      "alternativeName": "A Stranger's Child",
+      "enName": null,
+      "type": "movie",
+      "typeNumber": 1,
+      "year": 2024,
+      "description": null,
+      "shortDescription": null,
+      "status": null,
+      "rating": {
+        "kp": 0,
+        "imdb": 6.3,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 5,
+        "imdb": 70,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": 88,
+      "totalSeriesLength": null,
+      "seriesLength": null,
+      "ratingMpaa": null,
+      "ageRating": null,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/4486362/4b0ede18-6a32-48c8-bdfb-be397dc0533f/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/4486362/4b0ede18-6a32-48c8-bdfb-be397dc0533f/x1000"
+      },
+      "genres": [
+        {
+          "name": "триллер"
+        },
+        {
+          "name": "детектив"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Канада"
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": false,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5461682,
+      "name": "Неведомая Испания",
+      "alternativeName": "Hidden Spain",
+      "enName": null,
+      "type": "movie",
+      "typeNumber": 1,
+      "year": 2020,
+      "description": "Испания располагается между Средиземным морем и Атлантическим океаном, в результате чего там сложилось уникальное сочетание разнообразных климатических условий, подходящих для жизни самых разных животных.",
+      "shortDescription": "Как горы и климат влияют на животный и растительный мир? Увлекательное изучение природных чудес Испании",
+      "status": null,
+      "rating": {
+        "kp": 0,
+        "imdb": 0,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 40,
+        "imdb": 0,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": 50,
+      "totalSeriesLength": null,
+      "seriesLength": null,
+      "ratingMpaa": null,
+      "ageRating": 6,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/10703959/9ea56f99-9cd3-4b65-8422-a0d20bafeda1/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/10703959/9ea56f99-9cd3-4b65-8422-a0d20bafeda1/x1000"
+      },
+      "backdrop": {
+        "url": "https://image.openmoviedb.com/kinopoisk-ott-images/236744/2a0000018e74da6528b5f5b6acd49acdbc16/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-ott-images/236744/2a0000018e74da6528b5f5b6acd49acdbc16/x1000"
+      },
+      "genres": [
+        {
+          "name": "реальное ТВ"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Германия"
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": false,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5890768,
+      "name": "Современные технологии",
+      "alternativeName": "Skuld Technical Magazine. Mobility & Innovations",
+      "enName": null,
+      "type": "movie",
+      "typeNumber": 1,
+      "year": 2021,
+      "description": "Тематические рассказы, увлекательные репортажи и документальные материалы на самые разные темы современности.",
+      "shortDescription": null,
+      "status": null,
+      "rating": {
+        "kp": 0,
+        "imdb": 0,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 1,
+        "imdb": 0,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": null,
+      "totalSeriesLength": null,
+      "seriesLength": null,
+      "ratingMpaa": null,
+      "ageRating": 18,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/10592371/86c49600-5086-4a26-9c11-9985760e69e8/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/10592371/86c49600-5086-4a26-9c11-9985760e69e8/x1000"
+      },
+      "backdrop": {
+        "url": "https://image.openmoviedb.com/kinopoisk-ott-images/212840/2a00000190017e4358ab076a3ef621da012d/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-ott-images/212840/2a00000190017e4358ab076a3ef621da012d/x1000"
+      },
+      "genres": [
+        {
+          "name": "документальный"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Германия"
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": false,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5907269,
+      "name": "Проект «Другие люди?». Простые вещи",
+      "alternativeName": null,
+      "enName": null,
+      "type": "movie",
+      "typeNumber": 1,
+      "year": 2023,
+      "description": "Маша Грекова в 24 года создала в Петербурге уникальный проект — инклюзивные мастерские «Простые вещи», в которых взрослые люди с ментальными особенностями (аутизм, шизофрения и др) работают, общаются, строят отношения и учатся жить вне своей комнаты. Мастерские, где у особенных людей появляется выбор.",
+      "shortDescription": null,
+      "status": null,
+      "rating": {
+        "kp": 0,
+        "imdb": 0,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 2,
+        "imdb": 0,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": 28,
+      "totalSeriesLength": null,
+      "seriesLength": null,
+      "ratingMpaa": null,
+      "ageRating": 0,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/10812607/4d12fff3-3dfa-40f1-ad11-f325a45b3f98/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/10812607/4d12fff3-3dfa-40f1-ad11-f325a45b3f98/x1000"
+      },
+      "backdrop": {
+        "url": "https://image.openmoviedb.com/kinopoisk-ott-images/1534341/2a0000019030e8b9c4eea6d3d73e88123be4/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-ott-images/1534341/2a0000019030e8b9c4eea6d3d73e88123be4/x1000"
+      },
+      "genres": [
+        {
+          "name": "документальный"
+        },
+        {
+          "name": "короткометражка"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Россия"
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": false,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5699007,
+      "name": "Дарую ей власть над собой",
+      "alternativeName": "Shou ta yi bing",
+      "type": "tv-series",
+      "typeNumber": 2,
+      "year": 2024,
+      "description": null,
+      "shortDescription": null,
+      "status": "completed",
+      "rating": {
+        "kp": 0,
+        "imdb": 7.4,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 25,
+        "imdb": 5,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": null,
+      "totalSeriesLength": null,
+      "seriesLength": 13,
+      "ratingMpaa": null,
+      "ageRating": null,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/10900341/7b81ed24-447b-4177-8bc5-4ed800ec7cd3/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/10900341/7b81ed24-447b-4177-8bc5-4ed800ec7cd3/x1000"
+      },
+      "genres": [
+        {
+          "name": "мелодрама"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Китай"
+        }
+      ],
+      "releaseYears": [
+        {
+          "start": 2024,
+          "end": 2024
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": true,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5613194,
+      "name": "Великая Лилиан Холл",
+      "alternativeName": "The Great Lillian Hall",
+      "enName": null,
+      "type": "movie",
+      "typeNumber": 1,
+      "year": 2024,
+      "description": "Легендарная бродвейская актриса Лиллиан Холл готовится к новой роли на театральной сцене и параллельно борется с быстропрогрессирующей деменцией.",
+      "shortDescription": null,
+      "status": null,
+      "rating": {
+        "kp": 0,
+        "imdb": 7.5,
+        "filmCritics": 7.1,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 76,
+        "imdb": 979,
+        "filmCritics": 14,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": 110,
+      "totalSeriesLength": null,
+      "seriesLength": null,
+      "ratingMpaa": null,
+      "ageRating": null,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/10812607/03bd4e73-2448-4e72-b573-81c161f743e3/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/10812607/03bd4e73-2448-4e72-b573-81c161f743e3/x1000"
+      },
+      "genres": [
+        {
+          "name": "драма"
+        }
+      ],
+      "countries": [
+        {
+          "name": "США"
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": false,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5626361,
+      "name": "Советские джинсы",
+      "alternativeName": "Padomju dzinsi",
+      "type": "tv-series",
+      "typeNumber": 2,
+      "year": 2024,
+      "description": null,
+      "shortDescription": null,
+      "status": "completed",
+      "rating": {
+        "kp": 0,
+        "imdb": 8.2,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 26,
+        "imdb": 183,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": null,
+      "totalSeriesLength": null,
+      "seriesLength": null,
+      "ratingMpaa": null,
+      "ageRating": null,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/10893610/418f9f01-d44c-4afe-92f3-4fba97f4c595/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/10893610/418f9f01-d44c-4afe-92f3-4fba97f4c595/x1000"
+      },
+      "genres": [
+        {
+          "name": "драма"
+        },
+        {
+          "name": "комедия"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Латвия"
+        }
+      ],
+      "releaseYears": [
+        {
+          "start": 2024,
+          "end": 2024
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": true,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5637342,
+      "name": "Металлическая Руж",
+      "alternativeName": "Metallic Rouge",
+      "type": "anime",
+      "typeNumber": 4,
+      "year": 2024,
+      "description": "Будущее. Победив инопланетян с помощью боевых андроидов неанов, человечество колонизирует Марс, и наступает долгожданный мир. Поскольку боевые функции неанов становятся не нужны, их превращают в рабочих, и они становятся гражданами второго сорта по сравнению с людьми. Нуждаясь в ежедневной дозе специального наркотического нектара для поддержания жизнедеятельности, андроиды полностью зависят от своих хозяев-людей. Однако среди андроидов существует особый вид — протоны, способные трансформироваться в специальный экзоскелет со сверхчеловеческими способностями. К этой группе принадлежит Руж Редстар, которая работает под прикрытием в правительственной организации и вместе с напарницей-человеком Наоми Ортман занимается расследованием преступлений, связанных с андроидами.",
+      "shortDescription": null,
+      "status": "completed",
+      "rating": {
+        "kp": 0,
+        "imdb": 6,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 36,
+        "imdb": 397,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": null,
+      "totalSeriesLength": 286,
+      "seriesLength": 22,
+      "ratingMpaa": null,
+      "ageRating": null,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/10671298/c98e3e87-72b7-4e36-9fed-3a68981c2b15/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/10671298/c98e3e87-72b7-4e36-9fed-3a68981c2b15/x1000"
+      },
+      "genres": [
+        {
+          "name": "аниме"
+        },
+        {
+          "name": "мультфильм"
+        },
+        {
+          "name": "фантастика"
+        },
+        {
+          "name": "боевик"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Япония"
+        }
+      ],
+      "releaseYears": [
+        {
+          "start": 2024,
+          "end": 2024
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": true,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5609795,
+      "name": "Прекрасная бунтарка",
+      "alternativeName": "Sei nell'anima",
+      "enName": null,
+      "type": "movie",
+      "typeNumber": 1,
+      "year": 2024,
+      "description": "История восхождения одной из величайших рок-звезд Италии, Джанны Наннини, которая шла к своей мечте несмотря на препятствия со стороны своей семьи и музыкальной индустрии.",
+      "shortDescription": null,
+      "status": null,
+      "rating": {
+        "kp": 0,
+        "imdb": 6.3,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 26,
+        "imdb": 702,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": 112,
+      "totalSeriesLength": null,
+      "seriesLength": null,
+      "ratingMpaa": null,
+      "ageRating": null,
+      "genres": [
+        {
+          "name": "драма"
+        },
+        {
+          "name": "биография"
+        },
+        {
+          "name": "музыка"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Италия"
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": false,
+      "ticketsOnSale": false,
+      "poster": {
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/10809116/1793cd14-aad7-4bd8-bf00-a0558a5257e4/x1000",
+        "url": "https://image.openmoviedb.com/kinopoisk-images/10809116/1793cd14-aad7-4bd8-bf00-a0558a5257e4/orig"
+      }
+    },
+    {
+      "id": 5898245,
+      "name": null,
+      "alternativeName": "Shadow Land",
+      "enName": null,
+      "type": "movie",
+      "typeNumber": 1,
+      "year": 2024,
+      "description": null,
+      "shortDescription": null,
+      "status": null,
+      "rating": {
+        "kp": 0,
+        "imdb": 3.4,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 25,
+        "imdb": 249,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": 89,
+      "totalSeriesLength": null,
+      "seriesLength": null,
+      "ratingMpaa": "r",
+      "ageRating": null,
+      "genres": [
+        {
+          "name": "триллер"
+        }
+      ],
+      "countries": [
+        {
+          "name": "США"
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": false,
+      "ticketsOnSale": false,
+      "poster": {
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/1898899/f40c3a79-8df3-43f2-b6f9-54d49e67fa75/x1000",
+        "url": "https://image.openmoviedb.com/kinopoisk-images/1898899/f40c3a79-8df3-43f2-b6f9-54d49e67fa75/orig"
+      }
+    },
+    {
+      "id": 5613210,
+      "name": "Гитлер и нацисты: Суд над злом",
+      "alternativeName": "Hitler and the Nazis: Evil on Trial",
+      "type": "tv-series",
+      "typeNumber": 2,
+      "year": 2024,
+      "description": "О правлении Адольфа Гитлера и нацистской партии — от преддверия Второй мировой войны до Холокоста и Нюрнбергского процесса.",
+      "shortDescription": null,
+      "status": "completed",
+      "rating": {
+        "kp": 0,
+        "imdb": 7.6,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 60,
+        "imdb": 1748,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": null,
+      "totalSeriesLength": 60,
+      "seriesLength": null,
+      "ratingMpaa": null,
+      "ageRating": null,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/4486454/235f4026-7a0c-4d4e-a42f-32eaf49eb676/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/4486454/235f4026-7a0c-4d4e-a42f-32eaf49eb676/x1000"
+      },
+      "genres": [
+        {
+          "name": "документальный"
+        },
+        {
+          "name": "история"
+        }
+      ],
+      "countries": [
+        {
+          "name": "США"
+        }
+      ],
+      "releaseYears": [
+        {
+          "start": 2024,
+          "end": 2024
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": true,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5613565,
+      "name": "Бармен: Бокал бога",
+      "alternativeName": "Bartender: Kami no Glass",
+      "type": "anime",
+      "typeNumber": 4,
+      "year": 2024,
+      "description": "Управляющий известным токийским отелем Cardinal хочет нанять бармена, но основное требование к будущему сотруднику одно — умение приготовить напиток «Бокал бога». Однако все претенденты оказались не в состоянии выполнить главное условие для получения работы. Однажды управляющий посещает уютный бар Eden Hall, который расположен в тихом месте недалеко от оживлённых улиц Гиндзы. За стойкой его обслуживает Рю Сасакура — хозяин заведения и талантливый миксолог, который поражает гостя талантами и умением подать именно тот коктейль, который приносит клиенту покой и умиротворение. Рю сразу же предлагают работу в Cardinal, но парень отвечает отказом. Не оставляя попыток заполучить столь ценного кадра, глава отеля становится завсегдатаем Eden Hall.",
+      "shortDescription": null,
+      "status": null,
+      "rating": {
+        "kp": 0,
+        "imdb": 6.9,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 107,
+        "imdb": 297,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": null,
+      "totalSeriesLength": null,
+      "seriesLength": 23,
+      "ratingMpaa": null,
+      "ageRating": null,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/4483445/00ac8463-d518-42d5-a93d-f348c867b3d6/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/4483445/00ac8463-d518-42d5-a93d-f348c867b3d6/x1000"
+      },
+      "genres": [
+        {
+          "name": "аниме"
+        },
+        {
+          "name": "мультфильм"
+        },
+        {
+          "name": "драма"
+        },
+        {
+          "name": "комедия"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Япония"
+        }
+      ],
+      "releaseYears": [
+        {
+          "start": 2024,
+          "end": null
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": true,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5647498,
+      "name": null,
+      "alternativeName": "Deadbolt",
+      "enName": null,
+      "type": "movie",
+      "typeNumber": 1,
+      "year": 2024,
+      "description": null,
+      "shortDescription": null,
+      "status": null,
+      "rating": {
+        "kp": 0,
+        "imdb": 4.5,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 40,
+        "imdb": 144,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": 83,
+      "totalSeriesLength": null,
+      "seriesLength": null,
+      "ratingMpaa": null,
+      "ageRating": null,
+      "genres": [
+        {
+          "name": "ужасы"
+        },
+        {
+          "name": "триллер"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Канада"
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": false,
+      "ticketsOnSale": false,
+      "poster": {
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/9784475/8b8496f1-ebc6-4638-807e-25e8b8e6a6b8/x1000",
+        "url": "https://image.openmoviedb.com/kinopoisk-images/9784475/8b8496f1-ebc6-4638-807e-25e8b8e6a6b8/orig"
+      }
+    },
+    {
+      "id": 5880848,
+      "name": "Курентзис: Utopia",
+      "alternativeName": "Teodor Currentzis – UTOPIA",
+      "enName": null,
+      "type": "movie",
+      "typeNumber": 1,
+      "year": 2023,
+      "description": "Международный фестивальный оркестр Utopia, в котором принимают участие 116 музыкантов из 30 стран мира.",
+      "shortDescription": null,
+      "status": null,
+      "rating": {
+        "kp": 0,
+        "imdb": 0,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 0,
+        "imdb": 0,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 13
+      },
+      "movieLength": 91,
+      "totalSeriesLength": null,
+      "seriesLength": null,
+      "ratingMpaa": null,
+      "ageRating": 12,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/10812607/2bc9660d-4664-41d6-a135-b0800d3946b8/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/10812607/2bc9660d-4664-41d6-a135-b0800d3946b8/x1000"
+      },
+      "genres": [
+        {
+          "name": "концерт"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Австрия"
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": false,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5613436,
+      "name": "Прошлая ложь",
+      "alternativeName": "Las largas sombras",
+      "type": "tv-series",
+      "typeNumber": 2,
+      "year": 2024,
+      "description": null,
+      "shortDescription": null,
+      "status": "completed",
+      "rating": {
+        "kp": 0,
+        "imdb": 6.5,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 44,
+        "imdb": 515,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": null,
+      "totalSeriesLength": 309,
+      "seriesLength": null,
+      "ratingMpaa": null,
+      "ageRating": null,
+      "genres": [
+        {
+          "name": "драма"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Испания"
+        }
+      ],
+      "releaseYears": [
+        {
+          "start": 2024,
+          "end": 2024
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": true,
+      "ticketsOnSale": false,
+      "poster": {
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/9784475/1c162116-7d01-480e-a47e-38c77d5434c8/x1000",
+        "url": "https://image.openmoviedb.com/kinopoisk-images/9784475/1c162116-7d01-480e-a47e-38c77d5434c8/orig"
+      }
+    },
+    {
+      "id": 5461627,
+      "name": "Неведомая Австралия",
+      "alternativeName": "Hidden Australia",
+      "enName": null,
+      "type": "movie",
+      "typeNumber": 1,
+      "year": 2020,
+      "description": "Австралия знаменита своими морскими пляжами, однако вся внутренняя территория континента представляет собой «лоскутное одеяло» из контрастных природных зон: тропических лесов, гор, сухих равнин, обширных болот и засушливых пустынь.",
+      "shortDescription": "Какие диковинные животные населяют бескрайние просторы континента? Красочный док, снятый с невероятным юмором",
+      "status": null,
+      "rating": {
+        "kp": 0,
+        "imdb": 0,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 47,
+        "imdb": 0,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": 50,
+      "totalSeriesLength": null,
+      "seriesLength": null,
+      "ratingMpaa": null,
+      "ageRating": 6,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/4483445/eb8e64a7-817d-41ab-8745-36da29f34b54/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/4483445/eb8e64a7-817d-41ab-8745-36da29f34b54/x1000"
+      },
+      "backdrop": {
+        "url": "https://image.openmoviedb.com/kinopoisk-ott-images/224348/2a0000018e662457cf6d00f9b1c1c4ab2be6/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-ott-images/224348/2a0000018e662457cf6d00f9b1c1c4ab2be6/x1000"
+      },
+      "genres": [
+        {
+          "name": "реальное ТВ"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Германия"
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": false,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5699592,
+      "name": "Я, владыка демонов, взял эльфийку-рабыню в жёны. И как же мне её любить?",
+      "alternativeName": "Maou no Ore ga Dorei Elf wo Yome ni Shitanda ga, Dou Medereba Ii?",
+      "type": "anime",
+      "typeNumber": 4,
+      "year": 2024,
+      "description": null,
+      "shortDescription": null,
+      "status": null,
+      "rating": {
+        "kp": 6.603,
+        "imdb": 7.2,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": null
+      },
+      "votes": {
+        "kp": 180,
+        "imdb": 556,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": null,
+      "totalSeriesLength": null,
+      "seriesLength": 23,
+      "ratingMpaa": null,
+      "ageRating": null,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/4483445/12db97ac-aa76-4bc5-a750-f80ed9ee58c1/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/4483445/12db97ac-aa76-4bc5-a750-f80ed9ee58c1/x1000"
+      },
+      "genres": [
+        {
+          "name": "аниме"
+        },
+        {
+          "name": "мультфильм"
+        },
+        {
+          "name": "фэнтези"
+        },
+        {
+          "name": "боевик"
+        },
+        {
+          "name": "мелодрама"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Япония"
+        }
+      ],
+      "releaseYears": [
+        {
+          "start": 2024,
+          "end": null
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": true,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5699681,
+      "name": "Сказание об обручальных кольцах",
+      "alternativeName": "Kekkon Yubiwa Monogatari",
+      "type": "anime",
+      "typeNumber": 4,
+      "year": 2024,
+      "description": null,
+      "shortDescription": null,
+      "status": null,
+      "rating": {
+        "kp": 0,
+        "imdb": 5.4,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 24,
+        "imdb": 452,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": null,
+      "totalSeriesLength": null,
+      "seriesLength": 23,
+      "ratingMpaa": null,
+      "ageRating": null,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/1898899/1acdd6f4-9538-4bbc-a37b-843931b0a9de/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/1898899/1acdd6f4-9538-4bbc-a37b-843931b0a9de/x1000"
+      },
+      "genres": [
+        {
+          "name": "аниме"
+        },
+        {
+          "name": "мультфильм"
+        },
+        {
+          "name": "фэнтези"
+        },
+        {
+          "name": "боевик"
+        },
+        {
+          "name": "мелодрама"
+        },
+        {
+          "name": "комедия"
+        },
+        {
+          "name": "приключения"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Япония"
+        }
+      ],
+      "releaseYears": [
+        {
+          "start": 2024,
+          "end": null
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": true,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5626368,
+      "name": "Кто угодно, только не она",
+      "alternativeName": "Todas menos tú",
+      "enName": null,
+      "type": "movie",
+      "typeNumber": 1,
+      "year": 2024,
+      "description": null,
+      "shortDescription": null,
+      "status": null,
+      "rating": {
+        "kp": 0,
+        "imdb": 5.1,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 0,
+        "imdb": 214,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": 93,
+      "totalSeriesLength": null,
+      "seriesLength": null,
+      "ratingMpaa": null,
+      "ageRating": null,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/4486454/3c3f27ec-c6c8-409a-897c-2e88671c779c/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/4486454/3c3f27ec-c6c8-409a-897c-2e88671c779c/x1000"
+      },
+      "genres": [
+        {
+          "name": "мелодрама"
+        },
+        {
+          "name": "комедия"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Мексика"
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": false,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5632806,
+      "name": "Неразумный ангел в танце с демоном",
+      "alternativeName": "Oroka na Tenshi wa Akuma to Odoru",
+      "type": "anime",
+      "typeNumber": 4,
+      "year": 2024,
+      "description": "Проигрывая войну армии небесных ангелов, демоны ада находятся на грани краха. В качестве последней отчаянной попытки переломить ход войны демоны отправляют Масатору Акуцу к людям на Землю. Маскируясь под старшеклассника, он должен завербовать личность, способную привести демонов к победе. Одноклассница Лили Аманэ представляется Акуцу идеальным кандидатом, но она, как назло, оказывается ангелом, а постепенно возникающие романтические чувства осложняют и без того непростую ситуацию.",
+      "shortDescription": null,
+      "status": null,
+      "rating": {
+        "kp": 0,
+        "imdb": 6.2,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 40,
+        "imdb": 339,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": null,
+      "totalSeriesLength": 276,
+      "seriesLength": 23,
+      "ratingMpaa": null,
+      "ageRating": null,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/4486362/77c135b9-40fa-40de-bb73-36559e6573a0/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/4486362/77c135b9-40fa-40de-bb73-36559e6573a0/x1000"
+      },
+      "genres": [
+        {
+          "name": "аниме"
+        },
+        {
+          "name": "мультфильм"
+        },
+        {
+          "name": "фэнтези"
+        },
+        {
+          "name": "комедия"
+        },
+        {
+          "name": "мелодрама"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Япония"
+        }
+      ],
+      "releaseYears": [
+        {
+          "start": 2024,
+          "end": null
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": true,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5647499,
+      "name": "Варшава'21",
+      "alternativeName": null,
+      "type": "tv-series",
+      "typeNumber": 2,
+      "year": 2024,
+      "description": "В ходе предвыборной гонки за кресло президента Польши цинично убивают знаменитого журналиста Козельского. Польские телеканалы моментально подхватывают версию о вмешательстве России во внутренние дела страны, с целью поддержки силезских сепаратистов и дестабилизации обстановки. В качестве доказательства по ТВ крутят аудиозапись разговора российского посла Конобеева и одного из кандидатов в президенты Домбровского, которая, якобы, была разослана с почты убитого журналиста. Из небольшой искры раздувается геополитический пожар, способный нанести огромный ущерб интересам страны. Скомпрометированный сотрудник дипмиссии попадает в больницу с инфарктом, а на его место прибывает кризисный дипломат Вячеслав Васильев. Ему предстоит доказать, что обвинения в адрес Москвы не имеют под собой никаких оснований.",
+      "shortDescription": null,
+      "status": "completed",
+      "rating": {
+        "kp": 0,
+        "imdb": 0,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 1237,
+        "imdb": 0,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": null,
+      "totalSeriesLength": null,
+      "seriesLength": 45,
+      "ratingMpaa": null,
+      "ageRating": 16,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/10809116/7d2d4b1b-beb1-4fb1-b4d7-17785ce3e347/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/10809116/7d2d4b1b-beb1-4fb1-b4d7-17785ce3e347/x1000"
+      },
+      "genres": [
+        {
+          "name": "детектив"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Россия"
+        }
+      ],
+      "releaseYears": [
+        {
+          "start": 2024,
+          "end": 2024
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": true,
+      "ticketsOnSale": false
+    },
+    {
+      "id": 5647638,
+      "name": "Хозяюшки",
+      "alternativeName": null,
+      "enName": null,
+      "type": "movie",
+      "typeNumber": 1,
+      "year": 2024,
+      "description": "Хозяюшками в «Яндексе» называют отдел, отвечающий за кафетерии, зоны отдыха и многое другое, что составляет знаменитую домашнюю атмосферу офисов компании. Чего только нет в этих офисных кофе-пойнтах и буфетах — и появляется это все по расписанию, в срок, в сотнях зданий в десятках городов. В фильме хозяюшки рассказывают о том, как проходят их дни и как устроена их заботливая работа.",
+      "shortDescription": "Кто обеспечивает сотрудников «Яндекса» снеками, напитками и канцелярией? Подробный док о буднях офисных фей",
+      "status": null,
+      "rating": {
+        "kp": 0,
+        "imdb": 0,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "votes": {
+        "kp": 0,
+        "imdb": 0,
+        "filmCritics": 0,
+        "russianFilmCritics": 0,
+        "await": 0
+      },
+      "movieLength": 10,
+      "totalSeriesLength": null,
+      "seriesLength": null,
+      "ratingMpaa": null,
+      "ageRating": 18,
+      "poster": {
+        "url": "https://image.openmoviedb.com/kinopoisk-images/9784475/4001c736-3ad2-4527-ae78-3499d236735c/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/9784475/4001c736-3ad2-4527-ae78-3499d236735c/x1000"
+      },
+      "backdrop": {
+        "url": "https://image.openmoviedb.com/kinopoisk-ott-images/13074011/2a0000018fe8bc8a952a216a6d9ded13df4f/orig",
+        "previewUrl": "https://image.openmoviedb.com/kinopoisk-ott-images/13074011/2a0000018fe8bc8a952a216a6d9ded13df4f/x1000"
+      },
+      "genres": [
+        {
+          "name": "короткометражка"
+        },
+        {
+          "name": "документальный"
+        }
+      ],
+      "countries": [
+        {
+          "name": "Россия"
+        }
+      ],
+      "top10": null,
+      "top250": null,
+      "isSeries": false,
+      "ticketsOnSale": false
+    }
+  ],
+  "total": 283436,
+  "limit": 50,
+  "page": 1,
+  "pages": 5669
+}

@@ -30,7 +30,11 @@ export const MovieCard: FC<TMovieCardProps> = ({ data }) => {
   };
 
   return (
-    <div onClick={handleChooseMovie} className={cardStyles.movieCard}>
+    <div
+      data-cy="movie-card"
+      onClick={handleChooseMovie}
+      className={cardStyles.movieCard}
+    >
       <div className={cardStyles.cardWrapper}>
         <img
           className={cardStyles.cardPoster}
@@ -40,6 +44,7 @@ export const MovieCard: FC<TMovieCardProps> = ({ data }) => {
         <button
           className={cardStyles.favoriteBtn}
           onClick={handleFavoriteClick}
+          data-cy="favorite-button"
         >
           {isFavorite ? (
             <FavoriteIcon style={{ color: "red" }} />
