@@ -2,7 +2,6 @@
   "name": "vk-smb-test",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://munchedbox23.github.io/vk-smb-test",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
